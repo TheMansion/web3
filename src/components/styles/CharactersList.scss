@@ -1,0 +1,119 @@
+/*=======================================*\ 
+  GRID
+\*=======================================*/
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.4s;
+}
+.character {
+  transition: 0.4s;
+  border: none;
+  width: 18%;
+  margin: 1%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 2px 20px 0px #08080824;
+
+  &:hover {
+    box-shadow: 0px 2px 20px 0px #8f8f8fb9;
+  }
+}
+
+@supports (display: grid) {
+  main {
+    display: grid;
+    grid-row-gap: 40px;
+    justify-content: space-between;
+    grid-template-columns: repeat(5, 240px);
+    grid-auto-rows: auto;
+
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(4, 240px);
+    }
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 240px);
+    }
+
+    @media (max-width: 770px) {
+      grid-template-columns: repeat(2, 240px);
+    }
+    @media (max-width: 520px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  .character {
+    width: 100%;
+    margin: 0;
+
+    @media (max-width: 520px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.character_img {
+  display: block;
+  width: 100%;
+  height: 355px;
+  object-fit: cover;
+
+  @media (max-width: 520px) {
+    height: auto;
+  }
+}
+.character > footer {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Roboto';
+}
+.left-col {
+  width: 52%;
+  /* border: 1px dotted green; */
+}
+.left-col .name_wrapper {
+  display: flex;
+  align-items: center;
+}
+.left-col .name_wrapper .name {
+  display: inline-block;
+  color: var(--secundario);
+  margin-right: 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.left-col .desc {
+  color: var(--grey);
+}
+
+.right-col {
+  position: relative;
+  padding-left: 4px;
+  /* border: 1px dotted green; */
+  width: 34%;
+}
+.right-col .price {
+  color: var(--fushia);
+  font-size: 20px;
+  font-weight: 700;
+}
+.right-col .time {
+  color: var(--grey);
+}
+
+.right-col::before {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  content: '';
+  height: 100%;
+  width: 1px;
+  background: #08080824;
+}

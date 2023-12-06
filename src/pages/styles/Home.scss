@@ -1,0 +1,88 @@
+/*=======================================*\ 
+  Estilos para Sliders (Carrusel)
+\*=======================================*/
+/* Carousell (flickity) */
+.carousel-image {
+  height: 200px;
+  width: 138px;
+  display: flex;
+  background: rgb(212, 212, 212);
+}
+.carousel-image img {
+  height: 100%;
+}
+/* Carousel Banner (flickity) */
+.hero-banner {
+  height: 400px;
+  width: 1365px;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.home-subtitle {
+  color: var(--fushia);
+  margin: 40px 0 20px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.home-detail {
+  color: var(--principal);
+  margin: 16px 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 15px;
+  overflow-y: auto;
+}
+
+/*=======================================*\
+  flickity.css personalizado
+\*=======================================*/
+/* ---- flickity-button ---- */
+
+.hero-carousel .flickity-button {
+  position: absolute;
+  background: none;
+  border: 4px solid #ffffff;
+  opacity: 0.5;
+  color: #ffffff;
+}
+
+.hero-carousel {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.hero-carousel .flickity-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+  /* prevent disabled button from capturing pointer up event. #716 */
+  pointer-events: none;
+}
+
+.hero-carousel .flickity-button-icon {
+  fill: currentColor;
+}
+
+/* ---- previous/next buttons ---- */
+
+.hero-carousel .flickity-prev-next-button {
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* vertically center */
+  transform: translateY(-50%);
+}
+.hero-carousel .flickity-prev-next-button.previous {
+  left: 60px;
+}
+.hero-carousel .flickity-prev-next-button.next {
+  right: 60px;
+}

@@ -1,0 +1,9 @@
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 480px) {
+    display: block;
+  }
+}

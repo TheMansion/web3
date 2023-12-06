@@ -1,0 +1,46 @@
+.auth-sidebar {
+  position: relative;
+  width: 514px;
+  height: 100%;
+  background-color: #ffc9d1;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: auto;
+  }
+
+  .auth-sidebar-content {
+    display: flex;
+    flex-direction: column;
+
+    header {
+      padding: 64px 64px 30px;
+
+      @media (max-width: 480px) {
+        padding: 30px 20px 30px;
+      }
+
+      .logo {
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-weight: 700;
+
+        @media (max-width: 480px) {
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .artwork {
+      position: absolute;
+
+      bottom: 0;
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+}
