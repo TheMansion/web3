@@ -66,6 +66,14 @@ export default function Home() {
             </p>
           </section>
           <CharactersList badges={badges}></CharactersList>
+          <a
+            href="https://api.whatsapp.com/send?phone=51902757137&text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20como%20anunciar."
+            class="float"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-whatsapp my-float"></i>
+          </a>
         </div>
       </div>
       <Footer />
