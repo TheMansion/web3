@@ -41,7 +41,7 @@ export const CharactersList = ({ badges }) => {
     <main className="pb-16">
       {badges.map((badge) => {
         return (
-          <Link to={`./post/${badge._id}`} key={badge._id}>
+          <Link to={`./post/${badge._id}`} target="_blank" key={badge._id}>
             <div className="character">
               <header>
                 <img
@@ -59,15 +59,11 @@ export const CharactersList = ({ badges }) => {
                 <div className="left-col">
                   <div className="name_wrapper">
                     <h2 className="name">{badge.name}</h2>
-                    {badge.verified && <Badge></Badge>}
+                    {badge.verified && <Badge />}
                   </div>
-                  <p className="desc">{badge.nationality.label}</p>
-                </div>
-                <div className="right-col">
-                  <h2 className="price" alt="precio">
-                    S/ {badge.rate_1h}
-                  </h2>
-                  <p className="time">1 Hora</p>
+                  <p className="desc">
+                    S/ {badge.rate_1h} · {badge.nationality.label}
+                  </p>
                 </div>
               </footer>
             </div>
