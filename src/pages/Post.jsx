@@ -72,6 +72,8 @@ export default function Post() {
           </div>
           <a
             href={`https://api.whatsapp.com/send?phone=51${data.phone}&text=Hola ${data.name}, te he visto en Cucas y me gustaría quedar contigo.`}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Whatsapp></Whatsapp>
             {data.phone}
