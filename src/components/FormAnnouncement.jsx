@@ -59,13 +59,21 @@ const eyeOptions = [
 
 const countrieOptions = [
   { value: "AR", label: "Argentina" },
-  { value: "BR", label: "Brasil" },
-  { value: "CO", label: "Colombia" },
-  { value: "EC", label: "Ecuador" },
-  { value: "PE", label: "Peru" },
-  { value: "VE", label: "Venezuela" },
-  { value: "MX", label: "Mexico" },
-  { value: "PA", label: "Panamá" },
+  { value: "BO", label: "Boliviana" },
+  { value: "BR", label: "Brasileña" },
+  { value: "CL", label: "Chilena" },
+  { value: "CO", label: "Colombiana" },
+  { value: "CR", label: "Costarricense" },
+  { value: "CU", label: "Cubana" },
+  { value: "EC", label: "Ecuatoriana" },
+  { value: "MX", label: "Méxicana" },
+  { value: "PA", label: "Panameña" },
+  { value: "PY", label: "Paraguaya" },
+  { value: "PE", label: "Peruana" },
+  { value: "PR", label: "Puertorriqueña" },
+  { value: "DO", label: "Dominicana" },
+  { value: "UY", label: "Uruguaya" },
+  { value: "VE", label: "Venezolana" },
 ];
 
 const servicesOptions = [
