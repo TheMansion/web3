@@ -48,7 +48,7 @@ export const Carousell = () => {
               <Link to="/post/5f10c5d814238e00088f2594">
                 <picture>
                   <source srcSet={kiaraWebp} type="image/webp" />
-                  <img src={kiara} alt="" />
+                  <img src={kiara} alt="" aria-label="Anuncio de Kiara" />
                 </picture>
               </Link>
             </li>
@@ -56,7 +56,7 @@ export const Carousell = () => {
               <Link to="/post/5efbef1cdf8be90008f3d12a">
                 <picture>
                   <source srcSet={greimarWebp} type="image/webp" />
-                  <img src={greimar} alt="" />
+                  <img src={greimar} alt="" aria-label="Anuncio de Greimar" />
                 </picture>
               </Link>
             </li>
@@ -64,7 +64,11 @@ export const Carousell = () => {
               <Link to="/post/5f3321242d0ea70008a6b165">
                 <picture>
                   <source srcSet={alessandraWebp} type="image/webp" />
-                  <img src={alessandra} alt="" />
+                  <img
+                    src={alessandra}
+                    alt=""
+                    aria-label="Anuncio de Alessandra"
+                  />
                 </picture>
               </Link>
             </li>
@@ -72,7 +76,7 @@ export const Carousell = () => {
               <Link to="/post/5efd1e68ccc31713d8db9732">
                 <picture>
                   <source srcSet={fernandaWebp} type="image/webp" />
-                  <img src={fernanda} alt="" />
+                  <img src={fernanda} alt="" aria-label="Anuncio de Fernanda" />
                 </picture>
               </Link>
             </li>
@@ -80,7 +84,7 @@ export const Carousell = () => {
               <Link to="/post/5f3045c9b3d8190007676d02">
                 <picture>
                   <source srcSet={jimenaWebp} type="image/webp" />
-                  <img src={jimena} alt="" />
+                  <img src={jimena} alt="" aria-label="Anuncio de Jimena" />
                 </picture>
               </Link>
             </li>
@@ -88,7 +92,7 @@ export const Carousell = () => {
               <Link to="/post/5f341f87353334000841853a">
                 <picture>
                   <source srcSet={melissaWebp} type="image/webp" />
-                  <img src={melissa} alt="" />
+                  <img src={melissa} alt="" aria-label="Anuncio de Melissa" />
                 </picture>
               </Link>
             </li>
@@ -96,7 +100,7 @@ export const Carousell = () => {
               <Link to="/post/5f11138e49dbfe00076b4cb8">
                 <picture>
                   <source srcSet={leslyWebp} type="image/webp" />
-                  <img src={lesly} alt="" />
+                  <img src={lesly} alt="" aria-label="Anuncio de Lesly" />
                 </picture>
               </Link>
             </li>
@@ -104,7 +108,7 @@ export const Carousell = () => {
               <Link to="/post/5efdfbfdccb33400071d08e5">
                 <picture>
                   <source srcSet={lorenaWebp} type="image/webp" />
-                  <img src={lorena} alt="" />
+                  <img src={lorena} alt="" aria-label="Anuncio de Lorena" />
                 </picture>
               </Link>
             </li>
@@ -112,7 +116,7 @@ export const Carousell = () => {
               <Link to="/post/5f527fa5f600410008ebe84f">
                 <picture>
                   <source srcSet={gabrielaWebp} type="image/webp" />
-                  <img src={gabriela} alt="" />
+                  <img src={gabriela} alt="" aria-label="Anuncio de Gabriela" />
                 </picture>
               </Link>
             </li>
@@ -120,7 +124,11 @@ export const Carousell = () => {
               <Link to="/post/5f5fca144a6d2b0007ee586c">
                 <picture>
                   <source srcSet={alejandraWebp} type="image/webp" />
-                  <img src={alejandra} alt="" />
+                  <img
+                    src={alejandra}
+                    alt=""
+                    aria-label="Anuncio de Alejandra"
+                  />
                 </picture>
               </Link>
             </li>
