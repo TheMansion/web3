@@ -41,7 +41,14 @@ export const CharactersList = ({ badges }) => {
     <main className="pb-16">
       {badges.map((badge) => {
         return (
-          <Link to={`./post/${badge._id}`} target="_blank" key={badge._id}>
+          <Link
+            to={`./post/${badge._id}`}
+            target="_blank"
+            key={badge._id}
+            aria-label={
+              "Anuncio de " + badge.name + " kine " + badge.nationality.label
+            }
+          >
             <div className="character">
               <header>
                 <img
