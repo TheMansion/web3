@@ -30,12 +30,14 @@ export const Carousell = () => {
           <button
             className="glide__arrow glide__arrow--left"
             data-glide-dir="<"
+            aria-label="Retroceder al Slide Anterior"
           >
             <PrevArrow></PrevArrow>
           </button>
           <button
             className="glide__arrow glide__arrow--right"
             data-glide-dir=">"
+            aria-label="Avanzar al Siguiente Slide"
           >
             <NextArrow></NextArrow>
           </button>
