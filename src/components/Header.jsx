@@ -7,7 +7,10 @@ export const Header = () => {
     <header className="header">
       <div className="container-fluid bg-black menu-wrapper">
         <div className="container px-10">
-          <h1 className="h1">Kinesiólogas en Perú</h1>
+          <h1 className="h1">
+            Anuncios de Putas y Kinesiologas en Lima - Encuentra Servicios de
+            Acompañantes
+          </h1>
           <nav className="menu">
             <ul>
               <div className="brand">
