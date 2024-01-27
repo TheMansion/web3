@@ -31,6 +31,10 @@
   font-size: 25px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
+
+  @media (max-width: 520px) {
+    font-size: 18px;
+  }
 }
 .home-detail {
   color: var(--principal);
@@ -38,6 +42,10 @@
   font-family: 'Montserrat', sans-serif;
   line-height: 24px;
   font-size: 18px;
+
+  @media (max-width: 520px) {
+    font-size: 14px;
+  }
 }
 
 .float{
