@@ -74,6 +74,7 @@ export default function Post() {
             href={`https://api.whatsapp.com/send?phone=51${data.phone}&text=Hola ${data.name}, te he visto en Cucas y me gustaría quedar contigo.`}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Boton flotante para contactar a soporte via Whatsapp"
           >
             <Whatsapp></Whatsapp>
             {data.phone}

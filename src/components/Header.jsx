@@ -13,11 +13,14 @@ export const Header = () => {
           </h1>
           <nav className="menu">
             <ul>
-              <div className="brand">
-                <a href="/">
+              <li className="brand">
+                <a
+                  href="/"
+                  aria-label="Logo que redirige a la pagina de inicio"
+                >
                   <img src={logo} alt="" />
                 </a>
-              </div>
+              </li>
               <li>
                 <Link to="/" className="menu-option">
                   Escorts en Lima
