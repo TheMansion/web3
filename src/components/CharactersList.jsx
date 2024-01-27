@@ -59,7 +59,6 @@ export const CharactersList = ({ badges }) => {
                     badge.images[0].slice(47)
                   }
                   alt=""
-                  loading="lazy"
                 />
               </header>
               <footer>
