@@ -1,7 +1,5 @@
-// Reset
 @import '~reset-css';
 
-// Normalize
 @import '~normalize.css';
 
 body {
@@ -9,6 +7,10 @@ body {
   font-family: 'Montserrat';
   font-weight: 400;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -20,7 +22,6 @@ code {
   outline: none !important;
 }
 
-// Layout
 /*=======================================*\
   CSS Fonts
 \*=======================================*/
