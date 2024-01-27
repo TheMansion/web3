@@ -71,6 +71,7 @@ export default function Home() {
             className="float flex justify-center items-center"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Boton flotante para contactar a soporte via Whatsapp"
           >
             <svg
               fill="#ffffff"
