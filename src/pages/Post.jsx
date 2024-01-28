@@ -71,7 +71,7 @@ export default function Post() {
             {data.verified && <Badge></Badge>}
           </div>
           <a
-            href={`https://api.whatsapp.com/send?phone=51${data.phone}&text=Hola ${data.name}, te he visto en Cucas y me gustaría quedar contigo.`}
+            href={`https://api.whatsapp.com/send?phone=51${data.phone}&text=Hola ${data.name}, te he visto en LatinGirls (Cucas) y me gustaría quedar contigo.`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Boton flotante para contactar a soporte via Whatsapp"
@@ -234,7 +234,7 @@ export default function Post() {
                   <PhotoView
                     src={
                       image.slice(0, 48) +
-                      "q_90/a_310,fl_tiled,l_brand,o_20,r_0,z_1.1" +
+                      "e_improve:outdoor/q_90/l_watermark,o_50,w_1.0/f_webp" +
                       image.slice(47)
                     }
                     key={i}
@@ -242,7 +242,7 @@ export default function Post() {
                     <img
                       src={
                         image.slice(0, 48) +
-                        "q_40/a_310,fl_tiled,l_brand,o_20,r_0,z_1.1" +
+                        "e_improve:outdoor/q_40/l_watermark,o_50,w_1.0/f_webp" +
                         image.slice(47)
                       }
                       alt="item"

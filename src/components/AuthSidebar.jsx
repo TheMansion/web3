@@ -17,8 +17,8 @@ export const AuthSidebar = () => {
             </Link>
             <h1 className="mb-4">¿Quieres trabajar a tope?</h1>
             <h2 className="leading-normal">
-              Publicar tus anuncios en Cucas hará que aumentes tus ingresos y
-              mejores la calidad de los contactos.
+              Publicar tus anuncios en Latin Girls hará que aumentes tus
+              ingresos y mejores la calidad de los contactos.
             </h2>
           </header>
           <div className="artwork">

@@ -60,7 +60,7 @@ export const Footer = () => {
           </div>
           <div className="bottom pb-12">
             <p className="text-center mb-10">
-              © 2023 Cucas Inc. Todos los derechos reservados.
+              © 2023 Latin Girls Inc. Todos los derechos reservados.
             </p>
             <p className="mb-4">
               La responsabilidad sobre el contenido de los anuncios recae
@@ -77,8 +77,9 @@ export const Footer = () => {
               leyes y regulaciones aplicables.
             </p>
             <p className="mb-4">
-              Cucas Inc. no asume ninguna responsabilidad por la veracidad,
-              legalidad o contenido de los anuncios publicados en este sitio.
+              Latin Girls Inc. no asume ninguna responsabilidad por la
+              veracidad, legalidad o contenido de los anuncios publicados en
+              este sitio.
             </p>
             <p className="mb-4">
               La participación en este servicio implica que los anunciantes
@@ -86,12 +87,12 @@ export const Footer = () => {
               relacionadas con la promoción de servicios para adultos.
             </p>
             <p className="mb-4">
-              Cucas Inc. se reserva el derecho de eliminar cualquier anuncio que
-              incumpla con estas leyes o que viole nuestras políticas. Este
-              sitio web no respalda ni garantiza la calidad de los servicios
-              ofrecidos por los anunciantes. Los usuarios asumen toda la
-              responsabilidad por cualquier interacción o transacción realizada
-              con los anunciantes.
+              Latin Girls Inc. se reserva el derecho de eliminar cualquier
+              anuncio que incumpla con estas leyes o que viole nuestras
+              políticas. Este sitio web no respalda ni garantiza la calidad de
+              los servicios ofrecidos por los anunciantes. Los usuarios asumen
+              toda la responsabilidad por cualquier interacción o transacción
+              realizada con los anunciantes.
             </p>
             <p className="mb-4">
               Para obtener más información sobre nuestras políticas o reportar

@@ -55,7 +55,7 @@ export const CharactersList = ({ badges }) => {
                   className="character_img"
                   src={
                     badge.images[0].slice(0, 48) +
-                    "w_240,h_355,c_fill,f_auto" +
+                    "e_improve/w_240,h_355,c_fill,f_auto" +
                     badge.images[0].slice(47)
                   }
                   alt=""

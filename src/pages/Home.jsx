@@ -59,7 +59,7 @@ export default function Home() {
               Perú.
             </h2>
             <p className="home-detail">
-              Bienvenidos a Cucas, guía de escorts en Lima, Perú. Nuestro
+              Bienvenidos a Latin Girls, guía de escorts en Lima, Perú. Nuestro
               objetivo como siempre es garantizar un experiencia al usuario de
               alta calidad donde todo el contenido esté trabajado al detalle y
               satisfacer así a los paladares más exquisitos.
