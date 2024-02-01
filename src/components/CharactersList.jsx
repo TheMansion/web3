@@ -60,14 +60,15 @@ export const CharactersList = ({ badges }) => {
                   }
                   srcSet={
                     badge.images[0].slice(0, 48) +
-                    "e_improve/w_120,h_180,c_fill,f_auto" +
+                    "e_improve/w_140,h_190,c_fill,f_auto" +
                     badge.images[0].slice(47) +
-                    " 480w," +
+                    " 140w," +
                     badge.images[0].slice(0, 48) +
                     "e_improve/w_240,h_355,c_fill,f_auto" +
                     badge.images[0].slice(47) +
-                    " 1920w,"
+                    " 240w,"
                   }
+                  sizes="(max-width: 601px) 140px, 240px"
                   alt=""
                   loading={index > 10 ? "lazy" : "eager"}
                   fetchpriority={index <= 10 ? "high" : "low"}
