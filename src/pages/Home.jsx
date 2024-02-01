@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-import { Header, Footer, Carousell, CharactersList } from "../components";
-
-import Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
+import { Header, Footer, CharactersList } from "../components";
 
 import "./styles/Home.scss";
 
@@ -20,30 +16,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const glide1 = new Glide("#carousell", {
-      type: "carousel",
-      autoplay: 2400,
-      animationDuration: 500,
-      animationTimingFunc: "linear",
-      perView: 10,
-      // focusAt: 'center',
-      gap: 0,
-      breakpoints: {
-        1280: {
-          perView: 8,
-        },
-        1022: {
-          perView: 6,
-        },
-        768: {
-          perView: 4,
-        },
-        500: {
-          perView: 3,
-        },
-      },
-    });
-    glide1.mount();
     fetchData();
   }, []);
 
@@ -52,7 +24,6 @@ export default function Home() {
       <Header />
       <div className="container-fluid">
         <div className="container px-10">
-          <Carousell></Carousell>
           <section>
             <h2 className="home-subtitle">
               Aquí encontrarás las mejores escorts de lujo en Lima y todo el
