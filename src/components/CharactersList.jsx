@@ -39,7 +39,7 @@ export const CharactersList = ({ badges }) => {
   }
   return (
     <main className="pb-16">
-      {badges.map((badge) => {
+      {badges.map((badge, index) => {
         return (
           <Link
             to={`./post/${badge._id}`}
@@ -59,6 +59,8 @@ export const CharactersList = ({ badges }) => {
                     badge.images[0].slice(47)
                   }
                   alt=""
+                  loading={index > 10 ? "lazy" : "eager"}
+                  fetchpriority={index <= 10 ? "high" : "low"}
                 />
               </header>
               <footer>
