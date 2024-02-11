@@ -70,6 +70,8 @@ export const CharactersList = ({ badges }) => {
                   }
                   sizes="(max-width: 601px) 140px, 240px"
                   alt=""
+                  height={355}
+                  width={240}
                   loading={index > 10 ? "lazy" : "eager"}
                   fetchpriority={index <= 10 ? "high" : "low"}
                 />
