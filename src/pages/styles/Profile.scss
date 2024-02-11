@@ -12,10 +12,10 @@
 
   .links-container {
     .logo {
-      height: 60px;
+      height: 34px;
 
       @media (max-width: 480px) {
-        height: 36px;
+        height: 28px;
       }
     }
   }
@@ -29,6 +29,10 @@
       width: 34px;
       border-radius: 50%;
       margin-right: 15px;
+
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
 
     .logout-btn {

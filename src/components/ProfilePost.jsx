@@ -19,6 +19,7 @@ export const ProfilePost = ({ postExists, data }) => {
                 <section className="post">
                   <p className="pb-2">ID del anuncio: {data[0]._id}</p>
                   <p className="pb-2">Nombre: {data[0].name}</p>
+                  <p className="pb-2">Teléfono: {data[0].phone}</p>
                   {/* <Masonry> */}
                   {data[0].images.map((image, i) => {
                     return (
