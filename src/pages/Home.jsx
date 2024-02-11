@@ -124,6 +124,18 @@ export default function Home() {
               alta calidad donde todo el contenido esté trabajado al detalle y
               satisfacer así a los paladares más exquisitos.
             </p>
+            <a
+              href="https://www.escort-links.com/escort-services-in-peru"
+              title="Escort services in Peru"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex justify-center mb-4"
+            >
+              <img
+                src="https://www.escort-links.com/images/escortlinks-3.jpg"
+                alt="Escort services in Peru"
+              />
+            </a>
           </section>
           <a
             href="https://api.whatsapp.com/send?phone=51902757137&text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20como%20anunciar."
