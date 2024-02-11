@@ -87,14 +87,14 @@ export default function Post() {
           {data.districtValue?.[0] && <MarkerComponent />}
           <p className="mt-1">{data.districtValue?.[0]?.etiqueta_ubigeo}</p>
         </div>
-        <pre className="description whitespace-pre-wrap leading-snug">
+        <h2 className="description whitespace-pre-wrap leading-snug">
           {data.presentation}
-        </pre>
+        </h2>
       </div>
       <div className="container sm:px-0 px-4 grid grid-rows-1 grid-cols-6 gap-8 py-10 text-sm">
         <div className="md:col-start-1 col-span-6 md:col-span-2 bg-gray-100 p-4">
           <div className="py-2 mb-2 border-solid border-pink-500 border-b">
-            <p className="text-pink-500 font-bold">Información y datos</p>
+            <p className="text-pink-600 font-bold">Información y datos</p>
           </div>
           <div className="flex justify-between py-2 border-solid border-gray-300 border-b">
             <div>Edad</div>
@@ -153,14 +153,14 @@ export default function Post() {
         </div>
         <div className="md:col-start-3 col-span-6 md:col-span-2 bg-gray-100 p-4">
           <div className="py-2 mb-2 border-solid border-pink-500 border-b">
-            <p className="text-pink-500 font-bold">Servicios</p>
+            <p className="text-pink-600 font-bold">Servicios</p>
           </div>
           <div className="mb-8">
             {data.services.map((service, i) => {
               return (
                 <button
                   key={i}
-                  className="bg-pink-500 text-white py-1 px-3 mt-2 mr-2 rounded-md"
+                  className="bg-pink-600 text-white py-1 px-3 mt-2 mr-2 rounded-md"
                 >
                   {service.label}
                 </button>
@@ -168,14 +168,14 @@ export default function Post() {
             })}
           </div>
           <div className="py-2 mb-2 border-solid border-pink-500 border-b">
-            <p className="text-pink-500 font-bold">Distritos</p>
+            <p className="text-pink-600 font-bold">Distritos</p>
           </div>
           <div>
             {data.districtValue?.map((district, i) => {
               return (
                 <button
                   key={i}
-                  className="bg-pink-500 text-white py-1 px-3 mt-2 mr-2 rounded-md"
+                  className="bg-pink-600 text-white py-1 px-3 mt-2 mr-2 rounded-md"
                 >
                   {district.nombre_ubigeo}
                 </button>
@@ -185,7 +185,7 @@ export default function Post() {
         </div>
         <div className="md:col-start-5 col-span-6 md:col-span-2 bg-gray-100 p-4">
           <div className="py-2 mb-2 border-solid border-pink-500 border-b">
-            <p className="text-pink-500 font-bold">Tarifas</p>
+            <p className="text-pink-600 font-bold">Tarifas</p>
           </div>
           <div className="flex justify-between py-2 border-solid border-gray-300 border-b">
             <div>30 Minutos</div>

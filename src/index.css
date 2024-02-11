@@ -67,7 +67,7 @@ code {
   --darkness-grey: #e6e6e6;
   --blue: #2699fb;
   --purple: #8a00ca;
-  --fushia: #ff3399;
+  --fushia: #E6006A;
   --light-fushia: #ff68b4;
 }
 /*=======================================*\
@@ -129,8 +129,6 @@ p {
 .h1 {
   padding-top: 10px;
   font-weight: normal;
-  font-size: 14px;
-  color: white;
 }
 
 /*=======================================*\
