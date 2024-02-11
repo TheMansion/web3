@@ -72,8 +72,8 @@ export const CharactersList = ({ badges }) => {
                   alt=""
                   height={355}
                   width={240}
-                  loading={index > 10 ? "lazy" : "eager"}
-                  fetchpriority={index <= 10 ? "high" : "low"}
+                  loading={index > 5 ? "lazy" : "eager"}
+                  fetchpriority={index <= 5 ? "high" : "low"}
                 />
               </header>
               <footer>
