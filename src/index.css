@@ -112,10 +112,6 @@ p {
 .container {
   margin: 0 auto;
 }
-.px-10 {
-  padding-left: 10px;
-  padding-right: 10px;
-}
 .pt-30 {
   padding-top: 30px;
 }

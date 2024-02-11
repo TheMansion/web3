@@ -4,9 +4,9 @@ import logo from "../icons/logo.png";
 
 export const Header = () => {
   return (
-    <header className="header">
+    <header className="header z-50">
       <div className="container-fluid bg-black menu-wrapper">
-        <div className="container px-10">
+        <div className="container px-2.5">
           <nav className="menu">
             <ul>
               <li className="brand">

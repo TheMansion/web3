@@ -1,0 +1,162 @@
+[
+  {
+    "id_ubigeo": "3928",
+    "nombre_ubigeo": "Cercado de Lima",
+    "codigo_ubigeo": "01",
+    "etiqueta_ubigeo": "Cercado de Lima, Lima",
+    "buscador_ubigeo": "cercado de lima lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3943",
+    "nombre_ubigeo": "Lince",
+    "codigo_ubigeo": "16",
+    "etiqueta_ubigeo": "Lince, Lima",
+    "buscador_ubigeo": "lince lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3949",
+    "nombre_ubigeo": "Miraflores",
+    "codigo_ubigeo": "22",
+    "etiqueta_ubigeo": "Miraflores, Lima",
+    "buscador_ubigeo": "miraflores lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3967",
+    "nombre_ubigeo": "Santiago de Surco",
+    "codigo_ubigeo": "40",
+    "etiqueta_ubigeo": "Santiago de Surco, Lima",
+    "buscador_ubigeo": "santiago de surco lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3941",
+    "nombre_ubigeo": "La Molina",
+    "codigo_ubigeo": "14",
+    "etiqueta_ubigeo": "La Molina, Lima",
+    "buscador_ubigeo": "la molina lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3958",
+    "nombre_ubigeo": "San Isidro",
+    "codigo_ubigeo": "31",
+    "etiqueta_ubigeo": "San Isidro, Lima",
+    "buscador_ubigeo": "san isidro lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3960",
+    "nombre_ubigeo": "San Juan de Miraflores",
+    "codigo_ubigeo": "33",
+    "etiqueta_ubigeo": "San Juan de Miraflores, Lima",
+    "buscador_ubigeo": "san juan de miraflores lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3944",
+    "nombre_ubigeo": "Los Olivos",
+    "codigo_ubigeo": "17",
+    "etiqueta_ubigeo": "Los Olivos, Lima",
+    "buscador_ubigeo": "los olivos lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3963",
+    "nombre_ubigeo": "San Miguel",
+    "codigo_ubigeo": "36",
+    "etiqueta_ubigeo": "San Miguel, Lima",
+    "buscador_ubigeo": "san miguel lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3957",
+    "nombre_ubigeo": "San Borja",
+    "codigo_ubigeo": "30",
+    "etiqueta_ubigeo": "San Borja, Lima",
+    "buscador_ubigeo": "san borja lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "3940",
+    "nombre_ubigeo": "Jesus Maria",
+    "codigo_ubigeo": "13",
+    "etiqueta_ubigeo": "Jesus Maria, Lima",
+    "buscador_ubigeo": "jesus maria lima",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3927"
+  },
+  {
+    "id_ubigeo": "4238",
+    "nombre_ubigeo": "Piura",
+    "codigo_ubigeo": "01",
+    "etiqueta_ubigeo": "Piura, Piura",
+    "buscador_ubigeo": "piura piura",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "4237"
+  },
+  {
+    "id_ubigeo": "2902",
+    "nombre_ubigeo": "Arequipa",
+    "codigo_ubigeo": "01",
+    "etiqueta_ubigeo": "Arequipa, Arequipa",
+    "buscador_ubigeo": "arequipa arequipa",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "2901"
+  },
+  {
+    "id_ubigeo": "2913",
+    "nombre_ubigeo": "Paucarpata",
+    "codigo_ubigeo": "12",
+    "etiqueta_ubigeo": "Paucarpata, Arequipa",
+    "buscador_ubigeo": "paucarpata arequipa",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "2901"
+  },
+  {
+    "id_ubigeo": "3972",
+    "nombre_ubigeo": "Barranca",
+    "codigo_ubigeo": "01",
+    "etiqueta_ubigeo": "Barranca, Barranca",
+    "buscador_ubigeo": "barranca barranca",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3971"
+  },
+  {
+    "id_ubigeo": "3992",
+    "nombre_ubigeo": "San Vicente de Ca\u00f1ete",
+    "codigo_ubigeo": "01",
+    "etiqueta_ubigeo": "San Vicente de Ca\u00f1ete, Ca\u00f1ete",
+    "buscador_ubigeo": "san vicente de ca\u00f1ete ca\u00f1ete",
+    "numero_hijos_ubigeo": "0",
+    "nivel_ubigeo": "3",
+    "id_padre_ubigeo": "3991"
+  }
+]

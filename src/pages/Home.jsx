@@ -1,30 +1,117 @@
 import { useEffect, useState } from "react";
+import Select from "react-select";
 import { Header, Footer, CharactersList } from "../components";
+import Ubigeos from "../../src/assets/ubigeos.json";
+import bg1 from "../../src/assets/search-bg/search-bg-1.jpg";
+import bg2 from "../../src/assets/search-bg/search-bg-2.jpg";
+import bg3 from "../../src/assets/search-bg/search-bg-3.jpg";
+import bg4 from "../../src/assets/search-bg/search-bg-4.jpg";
+import bg5 from "../../src/assets/search-bg/search-bg-5.jpg";
+import bg6 from "../../src/assets/search-bg/search-bg-6.jpg";
+import bg7 from "../../src/assets/search-bg/search-bg-7.jpg";
+import bg8 from "../../src/assets/search-bg/search-bg-8.jpg";
+import bg9 from "../../src/assets/search-bg/search-bg-9.jpg";
 
 import "./styles/Home.scss";
 
+const backgrounds = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9];
+const randomBackground =
+  backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
 export default function Home() {
+  const [ubigeos, setUbigeos] = useState([]);
+  const [districtValue, setDistrictValue] = useState(null);
   const [badges, setBadges] = useState([]);
+  const [filteredBadges, setFilteredBadges] = useState([]);
 
   const fetchData = async () => {
     await fetch(`${process.env.REACT_APP_API}/posts`)
       .then((response) => response.json())
-      .then((data) => setBadges(data))
+      .then((data) => {
+        setBadges(data);
+        setFilteredBadges(data);
+      })
       .catch((error) => {
         setBadges([]);
+        setFilteredBadges([]);
       });
   };
 
+  function onchangeDistrito(value) {
+    setDistrictValue(value);
+  }
+
   useEffect(() => {
+    let _ubigeos = Ubigeos.map((el) => {
+      return {
+        value: el.id_ubigeo,
+        label: el.etiqueta_ubigeo,
+      };
+    });
+    setUbigeos(_ubigeos);
     fetchData();
   }, []);
+
+  const handleSearchPost = (value) => {
+    if (value.length > 0) {
+      let filteredBadges = badges.filter((badge) => {
+        if (badge?.districtValue) {
+          return value.some(
+            (el) => el.value === badge.districtValue[0]?.id_ubigeo
+          );
+        } else {
+          return null;
+        }
+      });
+      setFilteredBadges(filteredBadges);
+    }
+  };
+
+  const handleClearFilter = () => {
+    setFilteredBadges(badges);
+    setDistrictValue(null);
+  };
 
   return (
     <>
       <Header />
       <div className="container-fluid">
-        <div className="container px-10 pt-8">
-          <CharactersList badges={badges}></CharactersList>
+        <div className="container relative h-40 lg-h-32">
+          <div className="grid gap-3 lg:gap-2 grid-cols-8 w-full px-5 lg:px-20 py-8 lg:py-14 z-10 absolute">
+            <Select
+              options={ubigeos}
+              id="ubigeos"
+              name="ubigeos"
+              value={districtValue}
+              isMulti
+              onChange={onchangeDistrito}
+              className="react-select-container col-span-8 lg:col-span-6 md:col-span-4"
+              classNamePrefix="react-select"
+              placeholder="¿Dónde estás?"
+              isOptionDisabled={() => districtValue?.length >= 5}
+            ></Select>
+            <button
+              className="lg:col-span-1 col-span-4 md:col-span-2 bg-white/80 hover:bg-pink-600 text-pink-600 font-semibold hover:text-white py-1 px-4 border border-pink-700 rounded"
+              onClick={() => handleSearchPost(districtValue)}
+              disabled={!districtValue}
+            >
+              Buscar
+            </button>
+            <button
+              className="lg:col-span-1 col-span-4 md:col-span-2 bg-white/80 hover:bg-pink-600 text-pink-600 font-semibold hover:text-white py-1 px-4 border border-pink-500 hover:border-transparent rounded"
+              onClick={handleClearFilter}
+            >
+              Limpiar
+            </button>
+          </div>
+          <img
+            src={randomBackground}
+            alt=""
+            className="w-[100%] h-[100%] object-cover absolute"
+          />
+        </div>
+        <div className="container px-2.5 pt-8">
+          <CharactersList badges={filteredBadges}></CharactersList>
           <section>
             <h1 className="h1">Putas y Kinesiólogas en Perú</h1>
             <h2 className="home-subtitle">

@@ -170,7 +170,7 @@
         min-height: 40px;
         border-radius: 8px;
         border-color: transparent;
-        background-color: #f3f3f4;
+        background-color: #ffffff3d;
         transition: background-color 200ms ease, outline 200ms ease,
           color 200ms ease, box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
 
@@ -178,14 +178,14 @@
         &:active {
           border-color: rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
-          background-color: #fff;
+          background-color: #ffffff4f;
         }
       }
 
       .react-select__control--is-focused {
         border-color: rgba(234, 76, 137, 0.4);
         box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
-        background-color: #fff;
+        background-color: #ffffff6e;
       }
     }
   }

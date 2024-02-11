@@ -112,3 +112,34 @@
 .hero-carousel .flickity-prev-next-button.next {
   right: 60px;
 }
+
+.react-select-container {
+  min-height: 40px;
+
+  .react-select__control {
+    min-height: 40px;
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: #ffffffa8;
+    transition: background-color 200ms ease, outline 200ms ease,
+      color 200ms ease, box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
+
+    &:hover,
+    &:active {
+      border-color: rgba(0, 0, 0, 0.1);
+      // box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
+      box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.445);
+      background-color: #ffffffda;
+    }
+  }
+
+  .react-select__control--is-focused {
+    border-color: rgba(234, 76, 137, 0.788);
+    box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.445);
+    background-color: #ffffffda;
+  }
+
+  .react-select__multi-value {
+    background-color: #fff;
+  }
+}
