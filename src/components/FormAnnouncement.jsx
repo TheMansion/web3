@@ -252,9 +252,9 @@ export const FormAnnouncement = () => {
   const [presentation, setPresentation] = useState("");
   const [hair, setHair] = useState("");
   const [eye, setEye] = useState("");
-  const [dimensions, setDimensions] = useState({});
-  const [height, setHeight] = useState("");
-  const [weight, setWeight] = useState("");
+  const [dimensions, setDimensions] = useState({ 1: "90", 2: "60", 3: "90" });
+  const [height, setHeight] = useState("165");
+  const [weight, setWeight] = useState("55");
   const [rate_30m, setRate_30m] = useState("");
   const [rate_1h, setRate_1h] = useState("");
   const [rate_2h, setRate_2h] = useState("");
