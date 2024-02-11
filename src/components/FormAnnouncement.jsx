@@ -656,34 +656,73 @@ export const FormAnnouncement = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const isVideo = /\.(mp4|mov|ogg)$/;
+
   return (
     <>
       <section className="announcement">
         <form onSubmit={handleSubmit}>
-          <fieldset>(*) Campos obligatorios</fieldset>
           <fieldset>
-            <label>Subir imágenes *</label>
+            <label>Imágenes y Videos *</label>
             <div className="thumbnails">
-              {images?.map((image, i) => {
-                return (
-                  <div className="thumbnail-wrapper">
-                    <img
-                      src={image}
-                      alt="item"
-                      className="thumbnail"
-                      key={i}
-                    ></img>
-                    <div
-                      className="delete"
-                      onClick={() => handleDeleteImage(image)}
-                    >
-                      <p>x</p>
+              {images
+                ?.filter((archivo) => !isVideo.test(archivo))
+                .map((image, i) => {
+                  return (
+                    <div className="thumbnail-wrapper">
+                      <img
+                        src={image}
+                        alt="item"
+                        className="thumbnail"
+                        key={i}
+                      ></img>
+                      <div
+                        className="delete"
+                        onClick={() => handleDeleteImage(image)}
+                      >
+                        <svg
+                          width="50"
+                          height="50"
+                          fill="#000"
+                          class="bi bi-trash-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />{" "}
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              {images
+                ?.filter((archivo) => isVideo.test(archivo))
+                .map((image, i) => {
+                  return (
+                    <div className="thumbnail-wrapper">
+                      <video
+                        src={image}
+                        alt="item"
+                        className="thumbnail"
+                        key={i}
+                      ></video>
+                      <div
+                        className="delete"
+                        onClick={() => handleDeleteImage(image)}
+                      >
+                        <svg
+                          width="50"
+                          height="50"
+                          fill="#000"
+                          class="bi bi-trash-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />{" "}
+                        </svg>
+                      </div>
+                    </div>
+                  );
+                })}
               <div className="thumbnail" onClick={showWidget}>
-                <p>Subir</p>
+                <p>Agregar</p>
               </div>
             </div>
           </fieldset>

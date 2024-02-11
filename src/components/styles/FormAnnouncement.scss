@@ -66,7 +66,6 @@
       border: 2px dashed var(--light-fushia);
       border-radius: 10px;
       object-fit: cover;
-      cursor: pointer;
 
       .thumbnail-wrapper {
         position: relative;
@@ -76,10 +75,11 @@
 
       .thumbnail-wrapper:hover {
         transition: .2s;
-        opacity: .5;
+        opacity: .7;
 
         & .delete {
           visibility: visible;
+          cursor: pointer;
         }
       }
 
@@ -93,6 +93,7 @@
         width: 100px;
         border-radius: 8px;
         object-fit: cover;
+        cursor: pointer;
 
         &:hover {
           background-color: #d4d4d4;
