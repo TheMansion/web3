@@ -98,7 +98,7 @@ export default function Post() {
           </div>
           <div className="flex justify-between py-2 border-solid border-gray-300 border-b">
             <div>Edad</div>
-            <div>{2023 - data.age.year} Años</div>
+            <div>{new Date().getFullYear() - data.age.year} Años</div>
           </div>
           <div className="flex justify-between py-2 border-solid border-gray-300 border-b">
             <div>Idiomas</div>
