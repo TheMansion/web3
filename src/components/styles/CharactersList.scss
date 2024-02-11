@@ -94,7 +94,7 @@ main {
   text-transform: capitalize;
   color: var(--white);
   margin-right: 6px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
 
@@ -104,7 +104,7 @@ main {
 }
 .left-col .desc {
   color: var(--white);
-  font-size: 18px;
+  font-size: 16px;
 
   @media (max-width: 520px) {
     font-size: 12px;
