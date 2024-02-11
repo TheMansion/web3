@@ -77,7 +77,7 @@ export default function Home() {
       <Header />
       <div className="container-fluid">
         <div className="container relative h-40 lg-h-32">
-          <div className="grid gap-3 lg:gap-2 grid-cols-8 w-full px-5 lg:px-20 py-8 lg:py-14 z-10 absolute">
+          <div className="filter grid gap-3 lg:gap-2 grid-cols-8 w-full px-5 lg:px-20 py-8 lg:py-14 z-10 absolute">
             <Select
               options={ubigeos}
               id="ubigeos"
