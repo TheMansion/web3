@@ -61,6 +61,8 @@ export default function Post() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const isVideo = /\.(mp4|mov|ogg)$/;
+
   return (
     <>
       <Header></Header>
@@ -226,34 +228,87 @@ export default function Post() {
         </div>
       </div>
       <div className="container sm:px-0 px-4 pb-20">
+        <div className="title">
+          <div className="name">
+            Fotos (
+            {data.images.filter((archivo) => !isVideo.test(archivo)).length})
+          </div>
+        </div>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <PhotoProvider>
             <Masonry gutter="10px">
-              {data.images.map((image, i) => {
-                return (
-                  <PhotoView
-                    src={
-                      image.slice(0, 48) +
-                      "e_improve:outdoor/q_90/l_watermark,o_50,w_1.0/f_webp" +
-                      image.slice(47)
-                    }
-                    key={i}
-                  >
-                    <img
+              {data.images
+                .filter((archivo) => !isVideo.test(archivo))
+                .map((image, i) => {
+                  return (
+                    <PhotoView
                       src={
                         image.slice(0, 48) +
-                        "e_improve:outdoor/q_40/l_watermark,o_50,w_1.0/f_webp" +
+                        "e_improve:outdoor/q_90/l_watermark,o_50,w_1.0/f_webp" +
                         image.slice(47)
                       }
-                      alt="item"
-                      className="block w-full cursor-pointer"
-                      loading="lazy"
-                    ></img>
-                  </PhotoView>
-                );
-              })}
+                      key={i}
+                    >
+                      <img
+                        src={
+                          image.slice(0, 48) +
+                          "e_improve:outdoor/q_40/l_watermark,o_50,w_1.0/f_webp" +
+                          image.slice(47)
+                        }
+                        alt="item"
+                        className="block w-full cursor-pointer"
+                        loading="lazy"
+                      ></img>
+                    </PhotoView>
+                  );
+                })}
             </Masonry>
           </PhotoProvider>
+        </ResponsiveMasonry>
+      </div>
+      <div className="container sm:px-0 px-4 pb-20">
+        <div className="title">
+          <div className="name">
+            Videos(
+            {data.images.filter((archivo) => isVideo.test(archivo)).length})
+          </div>
+        </div>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry gutter="10px">
+            {data.images
+              .filter((archivo) => isVideo.test(archivo))
+              .map((video, i) => {
+                return (
+                  <video controls key={i}>
+                    <source
+                      src={
+                        video.slice(0, 48) +
+                        "l_watermark,o_50,w_1.0" +
+                        video.slice(47)
+                      }
+                      type="video/mp4"
+                    />
+                    <source
+                      src={
+                        video.slice(0, 48) +
+                        "l_watermark,o_50,w_1.0" +
+                        video.slice(47)
+                      }
+                      type="video/ogg"
+                    />
+                    <source
+                      src={
+                        video.slice(0, 48) +
+                        "l_watermark,o_50,w_1.0" +
+                        video.slice(47)
+                      }
+                      type="video/mov"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                );
+              })}
+          </Masonry>
         </ResponsiveMasonry>
       </div>
       <Footer />
