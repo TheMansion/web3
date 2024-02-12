@@ -30,14 +30,14 @@
   color: white;
 }
 
-.menu ul {
+.menu > ul {
   margin: 0;
   padding: 0;
   display: flex;
   height: 100%;
 }
 
-.menu ul li {
+.menu > ul li {
   color: var(--white);
   display: flex;
   height: 100%;
@@ -82,7 +82,7 @@
   }
 
   .button {
-    height: 30px;
+    height: 28px;
 
       @media (max-width: 480px) {
         height: 24px;
