@@ -5,6 +5,7 @@ import logo from "../icons/logo.png";
 import pe from "../assets/flags/pe.svg";
 import us from "../assets/flags/us.svg";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const HideOnClickOutside = ({ children, onOutsideClick }) => {
   const wrapperRef = useRef(null);
@@ -31,6 +32,7 @@ const HideOnClickOutside = ({ children, onOutsideClick }) => {
 };
 
 export const Header = () => {
+  const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState({ key: pe, label: "Español (PE)" });
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
 
@@ -42,11 +44,12 @@ export const Header = () => {
     setIsLangDropdownOpen(false);
   };
 
-  const handleChangeLang = ({ key, label }) => {
+  const handleChangeLang = ({ key, label, code }) => {
     setLanguage({
       key,
       label,
     });
+    i18n.changeLanguage(code);
     setIsLangDropdownOpen(false);
   };
 
@@ -66,7 +69,7 @@ export const Header = () => {
               </li>
               <li>
                 <Link to="/" className="menu-option">
-                  Escorts en Lima
+                  {t("escortsInLima")}
                 </Link>
               </li>
             </ul>
@@ -95,7 +98,11 @@ export const Header = () => {
                     <li
                       className="cursor-pointer"
                       onClick={() =>
-                        handleChangeLang({ key: us, label: "English (US)" })
+                        handleChangeLang({
+                          key: us,
+                          label: "English (US)",
+                          code: "en",
+                        })
                       }
                     >
                       <div
@@ -104,14 +111,18 @@ export const Header = () => {
                       >
                         <div className="inline-flex gap-2 items-center">
                           <img src={us} alt="" height={20} width={20} />
-                          Inglés (US)
+                          {t("english")} (US)
                         </div>
                       </div>
                     </li>
                     <li
                       className="cursor-pointer"
                       onClick={() =>
-                        handleChangeLang({ key: pe, label: "Español (PE)" })
+                        handleChangeLang({
+                          key: pe,
+                          label: "Español (PE)",
+                          code: "es",
+                        })
                       }
                     >
                       <div
@@ -120,7 +131,7 @@ export const Header = () => {
                       >
                         <div className="inline-flex gap-2 items-center">
                           <img src={pe} alt="" height={20} width={20} />
-                          Español (PE)
+                          {t("spanish")} (PE)
                         </div>
                       </div>
                     </li>
@@ -128,7 +139,7 @@ export const Header = () => {
                 </div>
               </HideOnClickOutside>
               <Link to="/login" id="box" className="button gradient-border">
-                Anuncia gratis
+                {t("advertiseFree")}
               </Link>
             </div>
           </nav>

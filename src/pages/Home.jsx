@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Select from "react-select";
 import { Header, Footer, CharactersList } from "../components";
+import { useTranslation } from "react-i18next";
 import Ubigeos from "../../src/assets/ubigeos.json";
 import bg1 from "../../src/assets/search-bg/search-bg-1.jpg";
 import bg2 from "../../src/assets/search-bg/search-bg-2.jpg";
@@ -19,6 +20,7 @@ const randomBackground =
   backgrounds[Math.floor(Math.random() * backgrounds.length)];
 
 export default function Home() {
+  const [t] = useTranslation();
   const [ubigeos, setUbigeos] = useState([]);
   const [districtValue, setDistrictValue] = useState(null);
   const [badges, setBadges] = useState([]);
@@ -87,7 +89,7 @@ export default function Home() {
               onChange={onchangeDistrito}
               className="react-select-container col-span-8 lg:col-span-6 md:col-span-4"
               classNamePrefix="react-select"
-              placeholder="¿Dónde estás?"
+              placeholder={t("whereAreYou")}
               isOptionDisabled={() => districtValue?.length >= 5}
             ></Select>
             <button
@@ -95,13 +97,13 @@ export default function Home() {
               onClick={() => handleSearchPost(districtValue)}
               disabled={!districtValue}
             >
-              Buscar
+              {t("search")}
             </button>
             <button
               className="lg:col-span-1 col-span-4 md:col-span-2 bg-white/80 hover:bg-pink-600 text-pink-600 font-semibold hover:text-white py-1 px-4 border border-pink-500 hover:border-transparent rounded"
               onClick={handleClearFilter}
             >
-              Limpiar
+              {t("clear")}
             </button>
           </div>
           <img
@@ -113,17 +115,9 @@ export default function Home() {
         <div className="container px-2.5 pt-8">
           <CharactersList badges={filteredBadges}></CharactersList>
           <section>
-            <h1 className="h1">Putas y Kinesiólogas en Perú</h1>
-            <h2 className="home-subtitle">
-              kinesiologas Escorts en Lima Perú y extranjeras, videollamadas de
-              kines A1 putas kines
-            </h2>
-            <p className="home-detail">
-              Bienvenidos a Latin Girls, guía de escorts en Lima, Perú. Nuestro
-              objetivo como siempre es garantizar un experiencia al usuario de
-              alta calidad donde todo el contenido esté trabajado al detalle y
-              satisfacer así a los paladares más exquisitos.
-            </p>
+            <h1 className="h1">{t("homeh1")}</h1>
+            <h2 className="home-subtitle">{t("homeh2")}</h2>
+            <p className="home-detail">{t("welcomeText")}</p>
             <a
               href="https://www.escort-links.com/escort-services-in-peru"
               title="Escort services in Peru"
