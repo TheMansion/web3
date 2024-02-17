@@ -3,15 +3,15 @@ import Select from "react-select";
 import { Header, Footer, CharactersList } from "../components";
 import { useTranslation } from "react-i18next";
 import Ubigeos from "../../src/assets/ubigeos.json";
-import bg1 from "../../src/assets/search-bg/search-bg-1.jpg";
-import bg2 from "../../src/assets/search-bg/search-bg-2.jpg";
-import bg3 from "../../src/assets/search-bg/search-bg-3.jpg";
-import bg4 from "../../src/assets/search-bg/search-bg-4.jpg";
-import bg5 from "../../src/assets/search-bg/search-bg-5.jpg";
-import bg6 from "../../src/assets/search-bg/search-bg-6.jpg";
-import bg7 from "../../src/assets/search-bg/search-bg-7.jpg";
-import bg8 from "../../src/assets/search-bg/search-bg-8.jpg";
-import bg9 from "../../src/assets/search-bg/search-bg-9.jpg";
+import bg1 from "../../src/assets/search-bg/search-bg-1.webp";
+import bg2 from "../../src/assets/search-bg/search-bg-2.webp";
+import bg3 from "../../src/assets/search-bg/search-bg-3.webp";
+import bg4 from "../../src/assets/search-bg/search-bg-4.webp";
+import bg5 from "../../src/assets/search-bg/search-bg-5.webp";
+import bg6 from "../../src/assets/search-bg/search-bg-6.webp";
+import bg7 from "../../src/assets/search-bg/search-bg-7.webp";
+import bg8 from "../../src/assets/search-bg/search-bg-8.webp";
+import bg9 from "../../src/assets/search-bg/search-bg-9.webp";
 
 import "./styles/Home.scss";
 
