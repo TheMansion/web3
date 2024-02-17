@@ -3,6 +3,7 @@ import Select from "react-select";
 import { Header, Footer, CharactersList } from "../components";
 import { useTranslation } from "react-i18next";
 import Ubigeos from "../../src/assets/ubigeos.json";
+
 import bg1 from "../../src/assets/search-bg/search-bg-1.webp";
 import bg2 from "../../src/assets/search-bg/search-bg-2.webp";
 import bg3 from "../../src/assets/search-bg/search-bg-3.webp";
@@ -13,11 +14,35 @@ import bg7 from "../../src/assets/search-bg/search-bg-7.webp";
 import bg8 from "../../src/assets/search-bg/search-bg-8.webp";
 import bg9 from "../../src/assets/search-bg/search-bg-9.webp";
 
+import bgsm1 from "../../src/assets/search-bg/search-bg-sm-1.webp";
+import bgsm2 from "../../src/assets/search-bg/search-bg-sm-2.webp";
+import bgsm3 from "../../src/assets/search-bg/search-bg-sm-3.webp";
+import bgsm4 from "../../src/assets/search-bg/search-bg-sm-4.webp";
+import bgsm5 from "../../src/assets/search-bg/search-bg-sm-5.webp";
+import bgsm6 from "../../src/assets/search-bg/search-bg-sm-6.webp";
+import bgsm7 from "../../src/assets/search-bg/search-bg-sm-7.webp";
+import bgsm8 from "../../src/assets/search-bg/search-bg-sm-8.webp";
+import bgsm9 from "../../src/assets/search-bg/search-bg-sm-9.webp";
+
 import "./styles/Home.scss";
 
 const backgrounds = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9];
-const randomBackground =
+const backgroundsMobile = [
+  bgsm1,
+  bgsm2,
+  bgsm3,
+  bgsm4,
+  bgsm5,
+  bgsm6,
+  bgsm7,
+  bgsm8,
+  bgsm9,
+];
+
+const imagenDesktop =
   backgrounds[Math.floor(Math.random() * backgrounds.length)];
+const imagenMobile =
+  backgroundsMobile[Math.floor(Math.random() * backgrounds.length)];
 
 export default function Home() {
   const [t] = useTranslation();
@@ -112,7 +137,10 @@ export default function Home() {
             </button>
           </div>
           <img
-            src={randomBackground}
+            src={imagenDesktop}
+            srcSet={`${imagenMobile} 480w, ${imagenDesktop} 1024w`}
+            sizes="(max-width: 480px) 100vw,
+           1024px"
             alt=""
             className="w-[100%] h-[100%] object-cover absolute bg-pink-200"
           />
