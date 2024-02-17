@@ -136,14 +136,14 @@ export default function Home() {
               {t("clear")}
             </button>
           </div>
-          <img
-            src={imagenDesktop}
-            srcSet={`${imagenMobile} 480w, ${imagenDesktop} 1024w`}
-            sizes="(max-width: 480px) 100vw,
-           1024px"
-            alt=""
-            className="w-[100%] h-[100%] object-cover absolute bg-pink-200"
-          />
+          <picture>
+            <source media="(max-width: 500px)" srcSet={imagenMobile} />
+            <img
+              src={imagenDesktop}
+              alt=""
+              className="w-[100%] h-[100%] object-cover absolute bg-pink-200"
+            />
+          </picture>
         </div>
         <div className="container px-2.5 pt-8">
           <CharactersList badges={filteredBadges}></CharactersList>
