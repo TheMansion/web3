@@ -8,36 +8,18 @@ import bg1 from "../../src/assets/search-bg/search-bg-1.webp";
 import bg2 from "../../src/assets/search-bg/search-bg-2.webp";
 import bg3 from "../../src/assets/search-bg/search-bg-3.webp";
 import bg4 from "../../src/assets/search-bg/search-bg-4.webp";
-import bg5 from "../../src/assets/search-bg/search-bg-5.webp";
-import bg6 from "../../src/assets/search-bg/search-bg-6.webp";
 import bg7 from "../../src/assets/search-bg/search-bg-7.webp";
-import bg8 from "../../src/assets/search-bg/search-bg-8.webp";
-import bg9 from "../../src/assets/search-bg/search-bg-9.webp";
 
 import bgsm1 from "../../src/assets/search-bg/search-bg-sm-1.webp";
 import bgsm2 from "../../src/assets/search-bg/search-bg-sm-2.webp";
 import bgsm3 from "../../src/assets/search-bg/search-bg-sm-3.webp";
 import bgsm4 from "../../src/assets/search-bg/search-bg-sm-4.webp";
-import bgsm5 from "../../src/assets/search-bg/search-bg-sm-5.webp";
-import bgsm6 from "../../src/assets/search-bg/search-bg-sm-6.webp";
 import bgsm7 from "../../src/assets/search-bg/search-bg-sm-7.webp";
-import bgsm8 from "../../src/assets/search-bg/search-bg-sm-8.webp";
-import bgsm9 from "../../src/assets/search-bg/search-bg-sm-9.webp";
 
 import "./styles/Home.scss";
 
-const backgrounds = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9];
-const backgroundsMobile = [
-  bgsm1,
-  bgsm2,
-  bgsm3,
-  bgsm4,
-  bgsm5,
-  bgsm6,
-  bgsm7,
-  bgsm8,
-  bgsm9,
-];
+const backgrounds = [bg1, bg2, bg3, bg4, bg7];
+const backgroundsMobile = [bgsm1, bgsm2, bgsm3, bgsm4, bgsm7];
 
 const imagenDesktop =
   backgrounds[Math.floor(Math.random() * backgrounds.length)];
