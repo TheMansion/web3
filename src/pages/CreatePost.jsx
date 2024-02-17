@@ -22,6 +22,16 @@ export default function CreatePost() {
       setToken(localStorage.getItem("token"));
       setUser(JSON.parse(localStorage.getItem("user")));
       // setPostExists(false)
+    } else {
+      const script = document.createElement("script");
+      script.src = "https://widget.cloudinary.com/v2.0/global/all.js";
+      script.async = true;
+      document.body.appendChild(script);
+
+      // Cleanup: remover el script cuando el componente se desmonte
+      return () => {
+        document.body.removeChild(script);
+      };
     }
   }, []);
 
