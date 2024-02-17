@@ -114,7 +114,7 @@ export default function Home() {
           <img
             src={randomBackground}
             alt=""
-            className="w-[100%] h-[100%] object-cover absolute"
+            className="w-[100%] h-[100%] object-cover absolute bg-pink-200"
           />
         </div>
         <div className="container px-2.5 pt-8">
