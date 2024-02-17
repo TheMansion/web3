@@ -69,7 +69,7 @@ export default function Post() {
       <div className="container pt-10 sm:px-0 px-4">
         <h1 className="title">
           <div className="name_wrapper">
-            <p className="name">{data.name}</p>
+            <p className="mr-2">{data.name}</p>
             {data.verified && <Badge></Badge>}
           </div>
           <a
