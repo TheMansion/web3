@@ -234,8 +234,10 @@ export default function Post() {
             {data.images.filter((archivo) => !isVideo.test(archivo)).length})
           </div>
         </div>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-          <PhotoProvider>
+        <PhotoProvider>
+          <ResponsiveMasonry
+            columnsCountBreakPoints={{ 350: 1, 800: 2, 1200: 3 }}
+          >
             <Masonry gutter="10px">
               {data.images
                 .filter((archivo) => !isVideo.test(archivo))
@@ -263,8 +265,8 @@ export default function Post() {
                   );
                 })}
             </Masonry>
-          </PhotoProvider>
-        </ResponsiveMasonry>
+          </ResponsiveMasonry>
+        </PhotoProvider>
       </div>
       <div className="container sm:px-0 px-4 pb-20">
         <div className="title">
