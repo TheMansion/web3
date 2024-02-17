@@ -49,30 +49,25 @@ export const CharactersList = ({ badges }) => {
             }
           >
             <div className="character">
-              <img
-                className="character_img"
-                src={
-                  badge.images[0].slice(0, 48) +
-                  "e_improve/w_240,h_355,c_fill,f_auto" +
-                  badge.images[0].slice(47)
-                }
-                srcSet={
-                  badge.images[0].slice(0, 48) +
-                  "e_improve/w_140,h_190,c_fill,f_auto" +
-                  badge.images[0].slice(47) +
-                  " 140w," +
-                  badge.images[0].slice(0, 48) +
-                  "e_improve/w_240,h_355,c_fill,f_auto" +
-                  badge.images[0].slice(47) +
-                  " 240w,"
-                }
-                sizes="(max-width: 601px) 140px, 240px"
-                alt=""
-                height={355}
-                width={240}
-                loading={index > 5 ? "lazy" : "eager"}
-                fetchpriority={index <= 5 ? "high" : "low"}
-              />
+              <picture>
+                <source
+                  media="(max-width: 500px)"
+                  srcSet={
+                    badge.images[0].slice(0, 48) +
+                    "e_improve/w_140,h_190,c_fill,f_auto" +
+                    badge.images[0].slice(47)
+                  }
+                />
+                <img
+                  src={
+                    badge.images[0].slice(0, 48) +
+                    "e_improve/w_240,h_355,c_fill,f_auto" +
+                    badge.images[0].slice(47)
+                  }
+                  alt=""
+                  className="character_img"
+                />
+              </picture>
               <footer>
                 <div className="name_wrapper">
                   <h2 className="name">{badge.name}</h2>
