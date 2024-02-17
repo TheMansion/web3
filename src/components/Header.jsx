@@ -81,6 +81,7 @@ export const Header = () => {
                 <button
                   type="button"
                   onClick={handleToggleLang}
+                  aria-label="Cambiar idioma"
                   className="inline-flex gap-2 items-center font-medium justify-center  lg:w-[100%] px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer bg-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
                 >
                   <img src={language.key} alt="" height={20} width={20} />
@@ -94,7 +95,7 @@ export const Header = () => {
                   }
                   id="language-dropdown-menu"
                 >
-                  <ul className="py-2 font-medium" role="none">
+                  <ul className="py-2 font-medium">
                     <li
                       className="cursor-pointer"
                       onClick={() =>
@@ -105,10 +106,7 @@ export const Header = () => {
                         })
                       }
                     >
-                      <div
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                        role="menuitem"
-                      >
+                      <div className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
                         <div className="inline-flex gap-2 items-center">
                           <img src={us} alt="" height={20} width={20} />
                           {t("english")} (US)
@@ -125,10 +123,7 @@ export const Header = () => {
                         })
                       }
                     >
-                      <div
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                        role="menuitem"
-                      >
+                      <div className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
                         <div className="inline-flex gap-2 items-center">
                           <img src={pe} alt="" height={20} width={20} />
                           {t("spanish")} (PE)

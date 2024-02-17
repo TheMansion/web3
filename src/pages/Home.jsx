@@ -80,6 +80,9 @@ export default function Home() {
       <div className="container-fluid">
         <div className="container relative h-40 lg-h-32">
           <div className="filter grid gap-3 lg:gap-2 grid-cols-8 w-full px-5 lg:px-20 py-8 lg:py-14 z-10 absolute">
+            <label htmlFor="ubigeos" className="hidden">
+              Buscar:
+            </label>
             <Select
               options={ubigeos}
               id="ubigeos"
@@ -96,12 +99,14 @@ export default function Home() {
               className="lg:col-span-1 col-span-4 md:col-span-2 bg-white/80 hover:bg-pink-600 text-pink-600 font-semibold hover:text-white py-1 px-4 border border-pink-700 rounded"
               onClick={() => handleSearchPost(districtValue)}
               disabled={!districtValue}
+              aria-label="Boton buscar"
             >
               {t("search")}
             </button>
             <button
               className="lg:col-span-1 col-span-4 md:col-span-2 bg-white/80 hover:bg-pink-600 text-pink-600 font-semibold hover:text-white py-1 px-4 border border-pink-500 hover:border-transparent rounded"
               onClick={handleClearFilter}
+              aria-label="Boton limpiar"
             >
               {t("clear")}
             </button>
