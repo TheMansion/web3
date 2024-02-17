@@ -12,11 +12,11 @@ export const CharactersList = ({ badges }) => {
           <div className="character" key={i}>
             <div
               role="status"
-              class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700"
+              className="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700"
             >
-              <div class="flex items-center justify-center h-40 lg:h-60 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+              <div className="flex items-center justify-center h-40 lg:h-60 mb-4 bg-gray-300 rounded dark:bg-gray-700">
                 <svg
-                  class="w-10 h-10 text-gray-200 dark:text-gray-600"
+                  className="w-10 h-10 text-gray-200 dark:text-gray-600"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -26,10 +26,10 @@ export const CharactersList = ({ badges }) => {
                   <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                 </svg>
               </div>
-              <div class="h-2 lg:h-3 bg-gray-200 rounded-full dark:bg-gray-700 mb-2"></div>
-              <div class="h-2 lg:h-3 bg-gray-200 rounded-full dark:bg-gray-700 mb-2"></div>
-              <div class="h-2 lg:h-3 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-              <span class="sr-only">Loading...</span>
+              <div className="h-2 lg:h-3 bg-gray-200 rounded-full dark:bg-gray-700 mb-2"></div>
+              <div className="h-2 lg:h-3 bg-gray-200 rounded-full dark:bg-gray-700 mb-2"></div>
+              <div className="h-2 lg:h-3 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              <span className="sr-only">Loading...</span>
             </div>
           </div>
         ))}
@@ -93,13 +93,13 @@ export const CharactersList = ({ badges }) => {
                         width="18px"
                         height="18px"
                         viewBox="595 796 200 200"
-                        enable-background="new 595 796 200 200"
+                        enableBackground="new 595 796 200 200"
                       >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                        <g id="SVGRepo_bgCarrier" strokeWidth="0" />
                         <g
                           id="SVGRepo_tracerCarrier"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
                         <g id="SVGRepo_iconCarrier">
                           <g>
