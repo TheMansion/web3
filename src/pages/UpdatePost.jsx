@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Navigate } from "react-router-dom";
 
 // Components
@@ -25,6 +26,9 @@ export default function UpdatePost() {
 
   return (
     <>
+      <Helmet>
+        <title>Actualizar anuncio | Latin Girls</title>
+      </Helmet>
       {localStorage.getItem("token") ? (
         <>
           <ProfileHeader></ProfileHeader>

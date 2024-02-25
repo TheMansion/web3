@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import Select from "react-select";
 import { Header, Footer, CharactersList } from "../components";
@@ -83,6 +84,20 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Kinesiólogas en Perú | Latin Girls</title>
+        <meta property="og:title" content="Latin Girls Escort (By CUCAS)" />
+        <meta
+          property="og:description"
+          content="Aquí encontrarás las mejores escorts, kinesiologas y putas de lujo en Lima y todo el Perú"
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/mansion/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1704700809/girls_cpix3e.jpg?_s=public-apps"
+        />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="400" />
+      </Helmet>
       <Header />
       <div className="container-fluid">
         <div className="container relative h-40 lg-h-32">

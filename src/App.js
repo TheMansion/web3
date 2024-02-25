@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./i18n";
 
@@ -30,20 +31,22 @@ function App() {
           </div>
         }
       >
-        <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/post/:id" element={<Post />}></Route>
-          <Route exact path="/login" element={<Login />}></Route>
-          <Route exact path="/register" element={<Register />}></Route>
-          <Route exact path="/perfil" element={<Profile />}></Route>
-          <Route exact path="/perfil/post" element={<CreatePost />}></Route>
-          <Route
-            exact
-            path="/perfil/post/editar"
-            element={<UpdatePost />}
-          ></Route>
-          <Route path="*" element={<NotFound />}></Route>
-        </Routes>
+        <HelmetProvider>
+          <Routes>
+            <Route exact path="/" element={<Home />}></Route>
+            <Route exact path="/post/:id" element={<Post />}></Route>
+            <Route exact path="/login" element={<Login />}></Route>
+            <Route exact path="/register" element={<Register />}></Route>
+            <Route exact path="/perfil" element={<Profile />}></Route>
+            <Route exact path="/perfil/post" element={<CreatePost />}></Route>
+            <Route
+              exact
+              path="/perfil/post/editar"
+              element={<UpdatePost />}
+            ></Route>
+            <Route path="*" element={<NotFound />}></Route>
+          </Routes>
+        </HelmetProvider>
       </Suspense>
     </Router>
   );

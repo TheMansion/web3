@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Header, Footer } from "../components";
 
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -65,6 +66,31 @@ export default function Post() {
 
   return (
     <>
+      <Helmet>
+        <title>{`Kinesióloga: ${data.name} ${data.phone}`}</title>
+        <meta
+          property="og:title"
+          content={`${data.name} ${data.phone} | Escort Latina`}
+        />
+        <meta
+          property="og:description"
+          content={`${data?.presentation?.slice(0, 120)}`}
+        />
+        <meta
+          property="og:image"
+          content={`${
+            data.images
+              .filter((archivo) => !isVideo.test(archivo))[0]
+              ?.slice(0, 48) +
+            "e_improve/w_600,h_400,c_fill,f_auto" +
+            data.images
+              .filter((archivo) => !isVideo.test(archivo))[0]
+              ?.slice(47)
+          }`}
+        />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="400" />
+      </Helmet>
       <Header></Header>
       <div className="container pt-10 sm:px-0 px-4">
         <h1 className="title">
@@ -216,11 +242,9 @@ export default function Post() {
             <div className="payment-methods">
               {data.pay_method.map((method, i) => {
                 return (
-                  <>
-                    <p key={i} className="mb-2">
-                      {method.label}.
-                    </p>
-                  </>
+                  <p key={i} className="mb-2">
+                    {method.label}.
+                  </p>
                 );
               })}
             </div>

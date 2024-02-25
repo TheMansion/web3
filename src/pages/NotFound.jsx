@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 import "./styles/NotFound.scss";
@@ -6,6 +7,9 @@ import "./styles/NotFound.scss";
 export default function NotFound() {
   return (
     <>
+      <Helmet>
+        <title>Latin Girls | Página no encontrada</title>
+      </Helmet>
       <div className="container404 container-star">
         <div className="star-1"></div>
         <div className="star-1"></div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Navigate } from "react-router-dom";
 
 // Components
@@ -39,6 +40,9 @@ export default function CreatePost() {
     <>
       {localStorage.getItem("token") ? (
         <>
+          <Helmet>
+            <title>Crear Anuncio | Latin Girls</title>
+          </Helmet>
           <ProfileHeader></ProfileHeader>
           <ProfileInfo
             username={user.name}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Navigate } from "react-router-dom";
 
 // Components
@@ -42,6 +43,9 @@ export default function Profile() {
 
   return (
     <>
+      <Helmet>
+        <title>Mi perfil | Latin Girls</title>
+      </Helmet>
       {localStorage.getItem("token") ? (
         <>
           <ProfileHeader></ProfileHeader>
