@@ -117,6 +117,20 @@ export default function Home() {
         />
         <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="400" />
+        {/* Preload de imagenes para mobile */}
+        <link
+          rel="preload"
+          href={imagenMobile}
+          as="image"
+          media="(max-width: 600px)"
+        ></link>
+        {/* Preload de imagenes para escritorio */}
+        <link
+          rel="preload"
+          href={imagenDesktop}
+          as="image"
+          media="(min-width: 601px)"
+        ></link>
       </Helmet>
       <Header />
       <div className="container-fluid">
