@@ -38,8 +38,8 @@ export default function Home() {
     await fetch(`${process.env.REACT_APP_API}/posts`)
       .then((response) => response.json())
       .then((data) => {
-        setBadges(data);
-        setFilteredBadges(data);
+        setBadges(data.posts.docs);
+        setFilteredBadges(data.posts.docs);
       })
       .catch((error) => {
         setBadges([]);
