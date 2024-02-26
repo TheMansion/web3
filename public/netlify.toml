@@ -1,0 +1,12 @@
+# netlify.toml
+
+# Configuración de encabezados para habilitar compresión gzip y control de caché
+
+[[headers]]
+  # Para todos los archivos
+  for = "/*"
+    [headers.values]
+      # Habilitar compresión gzip
+      Content-Encoding = "gzip"
+      # Establecer el control de caché para 1 año (31536000 segundos)
+      Cache-Control = "public, max-age=31536000"
