@@ -12,6 +12,8 @@ i18n.use(initReactI18next).init({
         english: "Inglés",
         spanish: "Español",
         advertiseFree: "Anuncia gratis",
+        seeMore: "Ver mas",
+        endOfList: "Fin de la lista",
         homeh1: "Putas y Kinesiólogas en Perú",
         homeh2:
           "kinesiologas Escorts en Lima Perú y extranjeras, videollamadas de kines A1 putas kines",
@@ -28,8 +30,11 @@ i18n.use(initReactI18next).init({
         english: "English",
         spanish: "Spanish",
         advertiseFree: "Advertise for free",
-        homeh1: "",
-        homeh2: "",
+        seeMore: "See more",
+        endOfList: "End of list",
+        homeh1: "Whores and Kinesiologists in Peru",
+        homeh2:
+          "kinesiologists Escorts in Lima Peru and foreigners, video calls from kines A1 kines whores",
         welcomeText:
           "Welcome to Latin Girls, escort guide in Lima, Peru. Our goal, as always, is to guarantee a high-quality user experience where all content is worked in detail and thus satisfy the most exquisite palates.",
       },

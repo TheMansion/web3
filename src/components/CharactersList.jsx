@@ -7,7 +7,7 @@ import "./styles/CharactersList.scss";
 export const CharactersList = ({ badges }) => {
   if (badges.length === 0) {
     return (
-      <main className="pb-16">
+      <main className="pb-8">
         {[...Array(10)].map((e, i) => (
           <div className="character" key={i}>
             <div
@@ -37,7 +37,7 @@ export const CharactersList = ({ badges }) => {
     );
   }
   return (
-    <main className="pb-16">
+    <main className="pb-8">
       {badges.map((badge, index) => {
         return (
           <Link

@@ -34,12 +34,21 @@ export default function Home() {
   const [badges, setBadges] = useState([]);
   const [filteredBadges, setFilteredBadges] = useState([]);
 
+  const limit = 25;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [nextPage, setNextPage] = useState(1);
+
   const fetchData = async () => {
-    await fetch(`${process.env.REACT_APP_API}/posts`)
+    await fetch(
+      `${process.env.REACT_APP_API}/posts?limit=${limit}&page=${nextPage}`
+    )
       .then((response) => response.json())
       .then((data) => {
-        setBadges(data.posts.docs);
-        setFilteredBadges(data.posts.docs);
+        setBadges([...badges, ...data.posts.docs]);
+        if (!districtValue) {
+          setFilteredBadges([...filteredBadges, ...data.posts.docs]);
+        }
+        setNextPage(data.posts.nextPage);
       })
       .catch((error) => {
         setBadges([]);
@@ -59,8 +68,19 @@ export default function Home() {
       };
     });
     setUbigeos(_ubigeos);
-    fetchData();
   }, []);
+
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage]);
+
+  useEffect(() => {
+    if (districtValue) {
+      handleSearchPost(districtValue);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [badges]);
 
   const handleSearchPost = (value) => {
     if (value.length > 0) {
@@ -144,6 +164,19 @@ export default function Home() {
         </div>
         <div className="container px-2.5 pt-8">
           <CharactersList badges={filteredBadges}></CharactersList>
+          <div className="flex justify-center">
+            {nextPage ? (
+              <button
+                onClick={() => setCurrentPage(nextPage)}
+                disabled={nextPage === null ? true : false}
+                className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2"
+              >
+                {t("seeMore")}
+              </button>
+            ) : (
+              <p>{t("endOfList")}</p>
+            )}
+          </div>
           <section>
             <h1 className="h1">{t("homeh1")}</h1>
             <h2 className="home-subtitle">{t("homeh2")}</h2>
