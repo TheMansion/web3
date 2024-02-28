@@ -330,6 +330,10 @@ export const FormAnnouncement = () => {
         setDepartmentValue(data[0].departmentValue);
         setProvinceValue(data[0].provinceValue);
         setDistrictValue(data[0].districtValue);
+        setAlwaysOn(data[0].alwaysOn);
+        setDays(data[0].days);
+        setIniTime(data[0].iniTime);
+        setEndTime(data[0].endTime);
       });
   };
 
@@ -540,6 +544,10 @@ export const FormAnnouncement = () => {
             departmentValue: departmentValue,
             provinceValue: provinceValue,
             districtValue: districtValue,
+            alwaysOn: alwaysOn,
+            days: days,
+            iniTime: iniTime,
+            endTime: endTime,
           }),
         })
           .then((response) => response.status)
@@ -617,6 +625,10 @@ export const FormAnnouncement = () => {
             departmentValue: departmentValue,
             provinceValue: provinceValue,
             districtValue: districtValue,
+            alwaysOn: alwaysOn,
+            days: days,
+            iniTime: iniTime,
+            endTime: endTime,
           }),
         })
           .then((response) => response.json())
@@ -658,6 +670,106 @@ export const FormAnnouncement = () => {
 
   const isVideo = /\.(mp4|mov|ogg)$/;
 
+  // Disponibilidad
+  const [alwaysOn, setAlwaysOn] = useState(true);
+
+  const handleChangeAlways = (e) => {
+    if (e.target.value === "true") {
+      setAlwaysOn(true);
+    } else {
+      setAlwaysOn(false);
+    }
+  };
+
+  const dayOptions = [
+    { value: 1, label: "Lunes" },
+    { value: 2, label: "Martes" },
+    { value: 3, label: "Miercoles" },
+    { value: 4, label: "Jueves" },
+    { value: 5, label: "Viernes" },
+    { value: 6, label: "Sabado" },
+    { value: 0, label: "Domingo" },
+  ];
+
+  const [days, setDays] = useState([
+    { value: 1, label: "Lunes" },
+    { value: 2, label: "Martes" },
+    { value: 3, label: "Miercoles" },
+    { value: 4, label: "Jueves" },
+    { value: 5, label: "Viernes" },
+    { value: 6, label: "Sabado" },
+    { value: 0, label: "Domingo" },
+  ]);
+
+  const handleChangeDays = (value) => {
+    setDays(value);
+  };
+
+  const iniTimes = [
+    // { value: 0, label: "00:00 AM" },
+    // { value: 1, label: "01:00 AM" },
+    // { value: 2, label: "02:00 AM" },
+    // { value: 3, label: "03:00 AM" },
+    // { value: 4, label: "04:00 AM" },
+    // { value: 5, label: "05:00 AM" },
+    // { value: 6, label: "06:00 AM" },
+    // { value: 7, label: "07:00 AM" },
+    { value: 8, label: "08:00 AM" },
+    { value: 9, label: "09:00 AM" },
+    { value: 10, label: "10:00 AM" },
+    { value: 11, label: "11:00 AM" },
+    { value: 12, label: "12:00 PM" },
+    { value: 13, label: "01:00 PM" },
+    { value: 14, label: "02:00 PM" },
+    // { value: 15, label: "03:00 PM" },
+    // { value: 16, label: "04:00 PM" },
+    // { value: 17, label: "05:00 PM" },
+    // { value: 18, label: "06:00 PM" },
+    // { value: 19, label: "07:00 PM" },
+    // { value: 20, label: "08:00 PM" },
+    // { value: 21, label: "09:00 PM" },
+    // { value: 22, label: "10:00 PM" },
+    // { value: 23, label: "11:00 PM" },
+  ];
+
+  const endTimes = [
+    { value: 0, label: "00:00 AM" },
+    { value: 1, label: "01:00 AM" },
+    { value: 2, label: "02:00 AM" },
+    // { value: 3, label: "03:00 AM" },
+    // { value: 4, label: "04:00 AM" },
+    // { value: 5, label: "05:00 AM" },
+    // { value: 6, label: "06:00 AM" },
+    // { value: 7, label: "07:00 AM" },
+    // { value: 8, label: "08:00 AM" },
+    // { value: 9, label: "09:00 AM" },
+    // { value: 10, label: "10:00 AM" },
+    // { value: 11, label: "11:00 AM" },
+    // { value: 12, label: "12:00 PM" },
+    // { value: 13, label: "01:00 PM" },
+    // { value: 14, label: "O2:00 PM" },
+    // { value: 15, label: "03:00 PM" },
+    // { value: 16, label: "04:00 PM" },
+    // { value: 17, label: "05:00 PM" },
+    // { value: 18, label: "06:00 PM" },
+    // { value: 19, label: "07:00 PM" },
+    { value: 20, label: "08:00 PM" },
+    { value: 21, label: "09:00 PM" },
+    { value: 22, label: "10:00 PM" },
+    { value: 23, label: "11:00 PM" },
+  ];
+
+  const [iniTime, setIniTime] = useState({ value: 8, label: "08:00 AM" });
+  const [endTime, setEndTime] = useState({ value: 22, label: "10:00 PM" });
+
+  const handleChangeIniTime = (value) => {
+    setIniTime(value);
+  };
+
+  const handleChangeEndTime = (value) => {
+    setEndTime(value);
+  };
+
   return (
     <>
       <section className="announcement">
@@ -669,13 +781,8 @@ export const FormAnnouncement = () => {
                 ?.filter((archivo) => !isVideo.test(archivo))
                 .map((image, i) => {
                   return (
-                    <div className="thumbnail-wrapper">
-                      <img
-                        src={image}
-                        alt="item"
-                        className="thumbnail"
-                        key={i}
-                      ></img>
+                    <div className="thumbnail-wrapper" key={i}>
+                      <img src={image} alt="item" className="thumbnail"></img>
                       <div
                         className="delete"
                         onClick={() => handleDeleteImage(image)}
@@ -684,7 +791,7 @@ export const FormAnnouncement = () => {
                           width="50"
                           height="50"
                           fill="#000"
-                          class="bi bi-trash-fill"
+                          className="bi bi-trash-fill"
                           viewBox="0 0 16 16"
                         >
                           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />{" "}
@@ -712,7 +819,7 @@ export const FormAnnouncement = () => {
                           width="50"
                           height="50"
                           fill="#000"
-                          class="bi bi-trash-fill"
+                          className="bi bi-trash-fill"
                           viewBox="0 0 16 16"
                         >
                           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />{" "}
@@ -988,6 +1095,121 @@ export const FormAnnouncement = () => {
               value={pay_method}
             ></Select>
           </fieldset>
+          <div>
+            <fieldset>
+              <label htmlFor="">Disponibilidad</label>
+              <div className="flex mb-4">
+                <div className="flex items-center h-5">
+                  <input
+                    id="radio-1"
+                    aria-describedby="helper-radio-text"
+                    type="radio"
+                    value="true"
+                    checked={alwaysOn.toString() === "true"}
+                    onChange={handleChangeAlways}
+                    name="alwaysOn"
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+                <div className="ms-2 text-sm">
+                  <label
+                    htmlFor="radio-1"
+                    className="font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    Siempre disponible
+                  </label>
+                  <p
+                    id="helper-radio-text"
+                    className="text-xs font-normal text-gray-500 dark:text-gray-300"
+                  >
+                    Lunes a Domingo las 24 Horas
+                  </p>
+                </div>
+              </div>
+              <div className="flex mb-4">
+                <div className="flex items-center h-5">
+                  <input
+                    id="radio-2"
+                    aria-describedby="helper-radio-text"
+                    type="radio"
+                    value="false"
+                    checked={alwaysOn.toString() === "false"}
+                    onChange={handleChangeAlways}
+                    name="alwaysOn"
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+                <div className="ms-2 text-sm">
+                  <label
+                    htmlFor="radio-2"
+                    className="font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    Personalizado
+                  </label>
+                  <p
+                    id="helper-radio-text"
+                    className="text-xs font-normal text-gray-500 dark:text-gray-300"
+                  >
+                    Elige días especificos con rangos de horas
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              {alwaysOn ? null : (
+                <div className="grid grid-cols-1 gap-2">
+                  <div>
+                    <p className="mb-2 font-normal text-gray-900">
+                      Dias de la semana
+                    </p>
+                    <Select
+                      onChange={handleChangeDays}
+                      id="days"
+                      name="days"
+                      isMulti
+                      options={dayOptions}
+                      isSearchable={false}
+                      className="react-select-container"
+                      classNamePrefix="react-select"
+                      value={days}
+                    ></Select>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <p className="mb-2 font-normal text-gray-900">
+                        Desde las *
+                      </p>
+                      <Select
+                        onChange={handleChangeIniTime}
+                        id="iniTime"
+                        name="iniTime"
+                        options={iniTimes}
+                        isSearchable={false}
+                        className="react-select-container"
+                        classNamePrefix="react-select"
+                        value={iniTime}
+                      ></Select>
+                    </div>
+                    <div>
+                      <p className="mb-2 font-normal text-gray-900">
+                        Hasta las *
+                      </p>
+                      <Select
+                        onChange={handleChangeEndTime}
+                        id="endTime"
+                        name="endTime"
+                        options={endTimes}
+                        isSearchable={false}
+                        className="react-select-container"
+                        classNamePrefix="react-select"
+                        value={endTime}
+                      ></Select>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </fieldset>
+          </div>
           <div className="grid grid-cols-2 gap-4">
             <fieldset>
               <label htmlFor="rate_30m">1/2 Hora</label>
@@ -1024,7 +1246,7 @@ export const FormAnnouncement = () => {
                 id="rate_2h"
                 name="rate_2h"
                 placeholder="200"
-                value={rate_2h}
+                value={rate_2h || ""}
               />
             </fieldset>
             <fieldset>
@@ -1036,7 +1258,7 @@ export const FormAnnouncement = () => {
                 id="rate_3h"
                 name="rate_3h"
                 placeholder="250"
-                value={rate_3h}
+                value={rate_3h || ""}
               />
             </fieldset>
           </div>
@@ -1050,7 +1272,7 @@ export const FormAnnouncement = () => {
                 id="rate_allNight"
                 name="rate_allNight"
                 placeholder="1000"
-                value={rate_allNight}
+                value={rate_allNight || ""}
               />
             </fieldset>
             <fieldset>
@@ -1062,7 +1284,7 @@ export const FormAnnouncement = () => {
                 id="rate_travel"
                 name="rate_travel"
                 placeholder="5000"
-                value={rate_travel}
+                value={rate_travel || ""}
               />
             </fieldset>
           </div>

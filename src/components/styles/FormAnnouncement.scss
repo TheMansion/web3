@@ -7,15 +7,16 @@
   form {
     width: 100%;
     max-width: 650px;
+
     fieldset {
       padding: 0;
-    }
 
-    label {
-      display: block;
-      margin: 12px 0 8px;
-      line-height: 1.4;
-      font-weight: 500;
+      & > label {
+        display: block;
+        margin: 12px 0 8px;
+        line-height: 1.4;
+        font-weight: 500;
+      }
     }
 
 
