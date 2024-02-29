@@ -34,7 +34,14 @@ export default function Home() {
   const [badges, setBadges] = useState([]);
   const [filteredBadges, setFilteredBadges] = useState([]);
 
-  const limit = 25;
+  const isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(
+    navigator.userAgent
+  );
+
+  let limit = 25;
+  if (isMobile) {
+    limit = 10;
+  }
   const [currentPage, setCurrentPage] = useState(1);
   const [nextPage, setNextPage] = useState(1);
 

@@ -31,7 +31,8 @@ main {
     display: grid;
     grid-row-gap: 20px;
     justify-content: space-between;
-    grid-template-columns: repeat(5, 240px);
+    grid-template-columns: repeat(5, 235px);
+    grid-template-rows: repeat(5, 352px);
     grid-auto-rows: auto;
 
     @media (max-width: 1280px) {
@@ -66,7 +67,7 @@ main {
 .character_img {
   display: block;
   width: 100%;
-  height: 357px;
+  height: 352px;
   object-fit: cover;
   transition: all .4s ease;
 
