@@ -54,7 +54,7 @@ export const CharactersList = ({ badges }) => {
                   media="(max-width: 500px)"
                   srcSet={
                     badge.images[0].slice(0, 48) +
-                    "e_improve/w_140,h_190,c_fill,f_auto" +
+                    "e_improve/w_160,h_216,c_fill,f_auto" +
                     badge.images[0].slice(47)
                   }
                 />
@@ -71,6 +71,9 @@ export const CharactersList = ({ badges }) => {
               <footer>
                 <div className="name_wrapper">
                   <h2 className="name">{badge.name}</h2>
+                  {badge.alwaysOn && (
+                    <span class="w-3.5 h-3.5 mr-1 bg-green-500 border-2 border-white rounded-full"></span>
+                  )}
                   {badge.verified && <Badge />}
                 </div>
                 <div className="desc">
