@@ -1095,7 +1095,85 @@ export const FormAnnouncement = () => {
               value={pay_method}
             ></Select>
           </fieldset>
-          <div>
+          <div className="grid grid-cols-2 gap-4">
+            <fieldset>
+              <label htmlFor="rate_30m">1/2 Hora</label>
+              <input
+                onChange={handleChange}
+                className="input"
+                type="text"
+                id="rate_30m"
+                name="rate_30m"
+                placeholder="100"
+                value={rate_30m}
+              />
+            </fieldset>
+            <fieldset>
+              <label htmlFor="rate_1h">1 Hora *</label>
+              <input
+                onChange={handleChange}
+                className="input"
+                type="text"
+                id="rate_1h"
+                name="rate_1h"
+                placeholder="150"
+                value={rate_1h}
+              />
+            </fieldset>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <fieldset>
+              <label htmlFor="rate_2h">2 Horas</label>
+              <input
+                onChange={handleChange}
+                className="input"
+                type="text"
+                id="rate_2h"
+                name="rate_2h"
+                placeholder="200"
+                value={rate_2h || ""}
+              />
+            </fieldset>
+            <fieldset>
+              <label htmlFor="rate_3h">3 Horas</label>
+              <input
+                onChange={handleChange}
+                className="input"
+                type="text"
+                id="rate_3h"
+                name="rate_3h"
+                placeholder="250"
+                value={rate_3h || ""}
+              />
+            </fieldset>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <fieldset>
+              <label htmlFor="rate_allNight">Toda la Noche</label>
+              <input
+                onChange={handleChange}
+                className="input"
+                type="text"
+                id="rate_allNight"
+                name="rate_allNight"
+                placeholder="1000"
+                value={rate_allNight || ""}
+              />
+            </fieldset>
+            <fieldset>
+              <label htmlFor="rate_travel">Viajes</label>
+              <input
+                onChange={handleChange}
+                className="input"
+                type="text"
+                id="rate_travel"
+                name="rate_travel"
+                placeholder="5000"
+                value={rate_travel || ""}
+              />
+            </fieldset>
+          </div>
+          <div className="p-5 mt-4 rounded-md bg-blue-50">
             <fieldset>
               <label htmlFor="">Disponibilidad</label>
               <div className="flex mb-4">
@@ -1208,84 +1286,6 @@ export const FormAnnouncement = () => {
                   </div>
                 </div>
               )}
-            </fieldset>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <fieldset>
-              <label htmlFor="rate_30m">1/2 Hora</label>
-              <input
-                onChange={handleChange}
-                className="input"
-                type="text"
-                id="rate_30m"
-                name="rate_30m"
-                placeholder="100"
-                value={rate_30m}
-              />
-            </fieldset>
-            <fieldset>
-              <label htmlFor="rate_1h">1 Hora *</label>
-              <input
-                onChange={handleChange}
-                className="input"
-                type="text"
-                id="rate_1h"
-                name="rate_1h"
-                placeholder="150"
-                value={rate_1h}
-              />
-            </fieldset>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <fieldset>
-              <label htmlFor="rate_2h">2 Horas</label>
-              <input
-                onChange={handleChange}
-                className="input"
-                type="text"
-                id="rate_2h"
-                name="rate_2h"
-                placeholder="200"
-                value={rate_2h || ""}
-              />
-            </fieldset>
-            <fieldset>
-              <label htmlFor="rate_3h">3 Horas</label>
-              <input
-                onChange={handleChange}
-                className="input"
-                type="text"
-                id="rate_3h"
-                name="rate_3h"
-                placeholder="250"
-                value={rate_3h || ""}
-              />
-            </fieldset>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <fieldset>
-              <label htmlFor="rate_allNight">Toda la Noche</label>
-              <input
-                onChange={handleChange}
-                className="input"
-                type="text"
-                id="rate_allNight"
-                name="rate_allNight"
-                placeholder="1000"
-                value={rate_allNight || ""}
-              />
-            </fieldset>
-            <fieldset>
-              <label htmlFor="rate_travel">Viajes</label>
-              <input
-                onChange={handleChange}
-                className="input"
-                type="text"
-                id="rate_travel"
-                name="rate_travel"
-                placeholder="5000"
-                value={rate_travel || ""}
-              />
             </fieldset>
           </div>
           <fieldset>

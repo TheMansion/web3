@@ -143,9 +143,6 @@ export default function Home() {
       <div className="container-fluid">
         <div className="container relative h-40 lg-h-32">
           <div className="filter grid gap-3 lg:gap-2 grid-cols-8 w-full px-5 lg:px-20 py-8 lg:py-14 z-10 absolute">
-            <label htmlFor="ubigeos" className="hidden">
-              Buscar:
-            </label>
             <Select
               options={ubigeos}
               id="ubigeos"

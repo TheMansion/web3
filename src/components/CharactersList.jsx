@@ -36,6 +36,34 @@ export const CharactersList = ({ badges }) => {
       </main>
     );
   }
+
+  const validateAvailability = (alwaysOn, days, iniTime, endTime) => {
+    const currentDay = new Date().getDay();
+    const currentHour = new Date().getHours();
+
+    if (alwaysOn) {
+      return alwaysOn;
+    }
+
+    if (days?.length > 0) {
+      let inDayRange = days.map((el) => el.value).includes(currentDay);
+      if (endTime.value <= 6 && currentHour <= 6) {
+        // Trabaja por la madrugada
+        return true;
+      } else {
+        // Trabaja durante el día
+        let minHour = iniTime.value;
+        let maxHour = endTime.value;
+
+        let inHourRange = minHour <= currentHour && currentHour <= maxHour;
+
+        return inDayRange && inHourRange;
+      }
+    } else {
+      return false;
+    }
+  };
+
   return (
     <main className="pb-8">
       {badges.map((badge, index) => {
@@ -71,8 +99,13 @@ export const CharactersList = ({ badges }) => {
               <footer>
                 <div className="name_wrapper">
                   <h2 className="name">{badge.name}</h2>
-                  {badge.alwaysOn && (
-                    <span class="w-3.5 h-3.5 mr-1 bg-green-500 border-2 border-white rounded-full"></span>
+                  {validateAvailability(
+                    badge?.alwaysOn,
+                    badge?.days,
+                    badge?.iniTime,
+                    badge?.endTime
+                  ) && (
+                    <span className="w-3.5 h-3.5 mr-1 bg-green-500 border-2 border-white rounded-full"></span>
                   )}
                   {badge.verified && <Badge />}
                 </div>
