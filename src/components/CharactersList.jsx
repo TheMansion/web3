@@ -105,7 +105,10 @@ export const CharactersList = ({ badges }) => {
                     badge?.iniTime,
                     badge?.endTime
                   ) && (
-                    <span className="w-3.5 h-3.5 mr-1 bg-green-500 border-2 border-white rounded-full"></span>
+                    <span class="relative flex h-3 w-3 mr-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
                   )}
                   {badge.verified && <Badge />}
                 </div>
@@ -145,6 +148,12 @@ export const CharactersList = ({ badges }) => {
                   )}
                 </div>
               </footer>
+              {badge.profession.value === "2" && (
+                <div className="badge-porn">
+                  <span>porn</span>
+                  <span>star</span>
+                </div>
+              )}
             </div>
           </Link>
         );
