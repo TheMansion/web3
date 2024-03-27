@@ -18,7 +18,9 @@ main {
     transform: scale(1.15);
   }
 
-  &:hover .badge-porn {
+  &:hover .badge-vip,
+  &:hover .badge-porn,
+  &:hover .badge-video {
     opacity: 0;
     transform: scale(1.2) translateY(-50px);
     transition: all .3s ease;
@@ -29,7 +31,7 @@ main {
     overflow: hidden;
     height: 100%;
     border-radius: 8px;
-    background: linear-gradient(#fff 50%, #000);
+    background: black;
   }
 }
 
@@ -78,35 +80,60 @@ main {
   overflow: hidden;
   object-fit: cover;
   transition: all .4s ease;
-  mask-image: linear-gradient( rgba(0,0,0,1) 50%, rgba(0,0,0,.25));
+  mask-image: linear-gradient( rgba(0,0,0,1) 50%, rgba(0,0,0,.1));
 
   @media (max-width: 520px) {
     height: 100%;
   }
 }
 
-.badge-porn {
+.badge-wrapper {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  top: 15px;
-  right: -10px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-image: linear-gradient(180deg,#be8fcd,#7a4490 98%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.3),inset 0 2px 0 0 hsla(0,0%,100%,.4);
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
+  top: 20px;
+  right: -12px;
+}
+
+.badge-vip {
+  font-size: 20px;
+  background-image: linear-gradient(180deg,#f1d119,#cc9505);
+
+  span {
+    line-height: 1;
+  }
+}
+
+.badge-porn {
   font-size: 12px;
-  transition-delay: .4s;
+  background-image: linear-gradient(180deg,#be8fcd,#7a4490 98%);
 
   span {
     line-height: 1.2;
   }
+}
+
+.badge-video {
+  font-size: 12px;
+  background-image: linear-gradient(180deg,#6aa8e2,#3b67e0 98%);
+
+  span {
+    line-height: 1;
+  }
+}
+
+.badge-porn, .badge-vip, .badge-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: -10px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.3),inset 0 2px 0 0 hsla(0,0%,100%,.4);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition-delay: .4s;
 }
 
 .character > footer {

@@ -64,6 +64,8 @@ export const CharactersList = ({ badges }) => {
     }
   };
 
+  const isVideo = /\.(mp4|mov|ogg)$/;
+
   return (
     <main className="pb-8">
       {badges.map((badge, index) => {
@@ -148,12 +150,25 @@ export const CharactersList = ({ badges }) => {
                   )}
                 </div>
               </footer>
-              {badge.profession.value === "2" && (
-                <div className="badge-porn">
-                  <span>porn</span>
-                  <span>star</span>
-                </div>
-              )}
+              <div className="badge-wrapper">
+                {badge.vip && (
+                  <div className="badge-vip">
+                    <span>vip</span>
+                  </div>
+                )}
+                {badge.profession.value === "2" && (
+                  <div className="badge-porn">
+                    <span>porn</span>
+                    <span>star</span>
+                  </div>
+                )}
+                {badge.images.filter((archivo) => isVideo.test(archivo))
+                  .length > 0 && (
+                  <div className="badge-video">
+                    <span>video</span>
+                  </div>
+                )}
+              </div>
             </div>
           </Link>
         );
