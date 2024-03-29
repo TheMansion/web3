@@ -10,18 +10,11 @@ import { FormAnnouncement } from "../components/FormAnnouncement";
 import "./styles/Profile.scss";
 
 export default function CreatePost() {
-  // const [postExists, setPostExists] = useState(false)
-  const [token, setToken] = useState(null);
-  const [user, setUser] = useState({
-    name: "",
-    verified: "",
-  });
+  const user = JSON.parse(localStorage.getItem("user"));
 
   useEffect(() => {
     if (localStorage.getItem("postExists") === "true") {
       window.location.href = "/perfil";
-      setToken(localStorage.getItem("token"));
-      setUser(JSON.parse(localStorage.getItem("user")));
       // setPostExists(false)
     } else {
       const script = document.createElement("script");
