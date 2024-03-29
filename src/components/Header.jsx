@@ -55,7 +55,7 @@ export const Header = () => {
 
   return (
     <header className="header z-50">
-      <div className="container-fluid bg-black menu-wrapper">
+      <div className="container-fluid menu-wrapper ">
         <div className="container px-2.5">
           <nav className="menu">
             <ul>
@@ -133,7 +133,7 @@ export const Header = () => {
                   </ul>
                 </div>
               </HideOnClickOutside>
-              <Link to="/login" id="box" className="button gradient-border">
+              <Link to="/login" id="box" className="button">
                 {t("advertiseFree")}
               </Link>
             </div>
