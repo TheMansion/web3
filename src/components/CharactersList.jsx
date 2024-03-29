@@ -68,7 +68,7 @@ export const CharactersList = ({ badges }) => {
 
   return (
     <main className="pb-8">
-      {badges.map((badge, index) => {
+      {badges.map((badge) => {
         return (
           <Link
             to={`./post/${badge._id}`}

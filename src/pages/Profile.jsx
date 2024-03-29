@@ -56,7 +56,7 @@ export default function Profile() {
             page="perfil"
           ></ProfileInfo>
 
-          <ProfilePost postExists={postExists} data={data}></ProfilePost>
+          <ProfilePost postExists={postExists} badges={data}></ProfilePost>
         </>
       ) : (
         <Navigate to="/login"></Navigate>
