@@ -1,7 +1,7 @@
 .btn {
   margin-top: 20px;
   border: none;
-  background-color: #ea4c89;
+  background-color: var(--fushia);
   color: #fff;
   height: 40px;
   width: 200px;
@@ -9,11 +9,15 @@
   transition: 0.4s;
   cursor: pointer;
 
+  &:hover {
+    background-color: var(--light-fushia);
+  }
+
   @media (max-width: 600px) {
     width: 100%;
   }
 
   &:disabled {
-    background-color: lighten(#ea4c89, 10);
+    background-color: lighten(#ea4c89, 11);
   }
 }
