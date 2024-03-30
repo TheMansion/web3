@@ -97,13 +97,13 @@ const Whatsapp = () => {
   );
 };
 
-const Badge = () => {
+const Badge = ({ width = "28px", height = "28px" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
-      width="28px"
-      height="28px"
+      width={width}
+      height={height}
     >
       <polygon
         fill="#42a5f5"

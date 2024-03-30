@@ -4,6 +4,7 @@ import "./styles/Header.scss";
 import logo from "../icons/logo.png";
 import pe from "../assets/flags/pe.svg";
 import us from "../assets/flags/us.svg";
+import pt from "../assets/flags/pt-br.svg";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -25,7 +26,7 @@ const HideOnClickOutside = ({ children, onOutsideClick }) => {
   }, [onOutsideClick]);
 
   return (
-    <div className="relative w-[48px] md:w-[150px]" ref={wrapperRef}>
+    <div className="relative w-[48px] md:w-[170px]" ref={wrapperRef}>
       {children}
     </div>
   );
@@ -62,6 +63,9 @@ export const Header = () => {
     if (lang === "es") {
       setLanguage({ key: pe, label: "Español (PE)" });
     }
+    if (lang === "pt") {
+      setLanguage({ key: pt, label: "Português (BR)" });
+    }
   }, []);
 
   return (
@@ -86,14 +90,14 @@ export const Header = () => {
             </ul>
             <div className="flex gap-4 items-center">
               <HideOnClickOutside
-                className="relative w-[48px] md:w-[150px]"
+                className="relative w-[48px] md:w-[170px]"
                 onOutsideClick={handleOutsideClick}
               >
                 <button
                   type="button"
                   onClick={handleToggleLang}
                   aria-label="Cambiar idioma"
-                  className="inline-flex gap-2 items-center font-medium justify-center  lg:w-[100%] px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer bg-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+                  className="inline-flex gap-2 items-center font-medium justify-center  lg:w-[100%] px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer bg-gray-100 hover:bg-gray-100"
                 >
                   <img src={language.key} alt="" height={20} width={20} />
                   <span className="hidden lg:block">{language.label}</span>
@@ -101,12 +105,13 @@ export const Header = () => {
                 <div
                   className={
                     isLangDropdownOpen
-                      ? "absolute transition-all opacity-100 scale-1 origin-top z-50 w-[150px] my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
-                      : "absolute transition-all opacity-0 scale-0 origin-top z-50 w-[150px] my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+                      ? "absolute transition-all opacity-100 scale-1 origin-top z-50 w-[170px] my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow "
+                      : "absolute transition-all opacity-0 scale-0 origin-top z-50 w-[170px] my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow "
                   }
                   id="language-dropdown-menu"
                 >
                   <ul className="py-2 font-medium">
+                    {/* Ingles */}
                     <li
                       className="cursor-pointer"
                       onClick={() =>
@@ -117,13 +122,14 @@ export const Header = () => {
                         })
                       }
                     >
-                      <div className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <div className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ">
                         <div className="inline-flex gap-2 items-center">
                           <img src={us} alt="" height={20} width={20} />
                           {t("english")} (US)
                         </div>
                       </div>
                     </li>
+                    {/* Español */}
                     <li
                       className="cursor-pointer"
                       onClick={() =>
@@ -134,10 +140,28 @@ export const Header = () => {
                         })
                       }
                     >
-                      <div className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <div className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         <div className="inline-flex gap-2 items-center">
                           <img src={pe} alt="" height={20} width={20} />
                           {t("spanish")} (PE)
+                        </div>
+                      </div>
+                    </li>
+                    {/* Portuges */}
+                    <li
+                      className="cursor-pointer"
+                      onClick={() =>
+                        handleChangeLang({
+                          key: pt,
+                          label: "Português (BR)",
+                          code: "pt",
+                        })
+                      }
+                    >
+                      <div className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        <div className="inline-flex gap-2 items-center">
+                          <img src={pt} alt="" height={20} width={20} />
+                          {t("portuguese")} (BR)
                         </div>
                       </div>
                     </li>

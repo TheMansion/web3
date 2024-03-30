@@ -1,10 +1,12 @@
 import { Badge } from "./icons";
 
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "./styles/ProfilePost.scss";
 
 export const ProfilePost = ({ postExists, badges }) => {
+  const { t } = useTranslation();
   const validateAvailability = (alwaysOn, days, iniTime, endTime) => {
     const currentDay = new Date().getDay();
     const currentHour = new Date().getHours();
@@ -95,7 +97,6 @@ export const ProfilePost = ({ postExists, badges }) => {
                                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                                 </span>
                               )}
-                              {badge.verified && <Badge />}
                             </div>
                             <div className="desc">
                               {badge.rate_1h ? "S/" : null} {badge.rate_1h} ·{" "}
@@ -135,6 +136,12 @@ export const ProfilePost = ({ postExists, badges }) => {
                             </div>
                           </footer>
                           <div className="badge-wrapper">
+                            {badge.verified && (
+                              <div className="badge-verified">
+                                <Badge width="24px" height="24px" />
+                                <span>{t("verified")}</span>
+                              </div>
+                            )}
                             {badge.vip && (
                               <div className="badge-vip">
                                 <span>vip</span>

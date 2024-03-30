@@ -114,7 +114,6 @@ export const CharactersList = ({ badges }) => {
                       <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                     </span>
                   )}
-                  {badge.verified && <Badge />}
                 </div>
                 <div className="desc">
                   {badge.rate_1h ? "S/" : null} {badge.rate_1h} ·{" "}
@@ -153,6 +152,12 @@ export const CharactersList = ({ badges }) => {
                 </div>
               </footer>
               <div className="badge-wrapper">
+                {badge.verified && (
+                  <div className="badge-verified">
+                    <Badge width="24px" height="24px" />
+                    <span>{t("verified")}</span>
+                  </div>
+                )}
                 {badge.vip && (
                   <div className="badge-vip">
                     <span>vip</span>
