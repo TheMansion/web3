@@ -50,8 +50,19 @@ export const Header = () => {
       label,
     });
     i18n.changeLanguage(code);
+    localStorage.setItem("lang", code);
     setIsLangDropdownOpen(false);
   };
+
+  useEffect(() => {
+    let lang = localStorage.getItem("lang");
+    if (lang === "en") {
+      setLanguage({ key: us, label: "English (US)" });
+    }
+    if (lang === "es") {
+      setLanguage({ key: pe, label: "Español (PE)" });
+    }
+  }, []);
 
   return (
     <header className="header z-50">

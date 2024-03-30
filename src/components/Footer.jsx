@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import "./styles/Footer.scss";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <>
       <footer className="footer">
@@ -59,9 +61,7 @@ export const Footer = () => {
             </nav>
           </div>
           <div className="bottom pb-12">
-            <p className="text-center mb-10">
-              © 2023 Latin Girls Inc. Todos los derechos reservados.
-            </p>
+            <p className="text-center mb-10">{t("footer.copy")}</p>
             <p className="mb-4">
               La responsabilidad sobre el contenido de los anuncios recae
               completamente en los anunciantes.

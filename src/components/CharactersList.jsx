@@ -1,10 +1,12 @@
 import { Badge } from "./icons";
 
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "./styles/CharactersList.scss";
 
 export const CharactersList = ({ badges }) => {
+  const { t } = useTranslation();
   if (badges.length === 0) {
     return (
       <main className="pb-8">
@@ -116,7 +118,7 @@ export const CharactersList = ({ badges }) => {
                 </div>
                 <div className="desc">
                   {badge.rate_1h ? "S/" : null} {badge.rate_1h} ·{" "}
-                  {badge.nationality.label}
+                  {t(badge.nationality.value)}
                 </div>
                 <div className="name_wrapper">
                   {badge?.districtValue?.length > 0 && (
