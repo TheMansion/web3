@@ -3,6 +3,9 @@ import Select from "react-select";
 import DatePicker from "@amir04lm26/react-modern-calendar-date-picker";
 import confetti from "canvas-confetti";
 
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+
 import "@amir04lm26/react-modern-calendar-date-picker/lib/DatePicker.css";
 import "./styles/FormAnnouncement.scss";
 import "./styles/FormButton.scss";
@@ -305,7 +308,7 @@ export const FormAnnouncement = () => {
         setName(data[0].name);
         setVerified(data[0].verified);
         setStatus(data[0].status);
-        setPhone(data[0].phone);
+        setPhone(data[0].phone + "");
         setAge(data[0].age);
         setNationality(data[0].nationality);
         // setDegree(data[0].degree);
@@ -456,10 +459,12 @@ export const FormAnnouncement = () => {
   };
 
   const validateAnounce = () => {
-    const phoneRegex = /(^[9])(\d{8})$/;
+    const phoneRegex =
+      /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{3,4}$/;
 
     function validatePhone(phone) {
       let proneIsValid = phoneRegex.test(phone);
+      console.log(proneIsValid);
       if (!proneIsValid) {
         return false;
       } else {
@@ -836,13 +841,20 @@ export const FormAnnouncement = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <fieldset>
               <label htmlFor="phone">Número de celular *</label>
-              <input
+              {/* <input
                 onChange={handleChange}
                 className="input"
                 type="number"
                 id="phone"
                 name="phone"
                 value={phone}
+              /> */}
+              <PhoneInput
+                defaultCountry="pe"
+                value={phone}
+                onChange={(phone) => setPhone(phone)}
+                className="phone-input-wrapper"
+                inputClassName="phone-input"
               />
             </fieldset>
             <fieldset>
@@ -850,7 +862,7 @@ export const FormAnnouncement = () => {
               <DatePicker
                 onChange={handleChangeAge}
                 wrapperClassName="d-block"
-                colorPrimary="#ff68b4"
+                colorPrimary="#ff0080"
                 locale={myCustomLocale}
                 maximumDate={maximumDate}
                 minimumDate={minimumDate}
