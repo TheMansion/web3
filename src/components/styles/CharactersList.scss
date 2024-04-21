@@ -121,6 +121,12 @@ main {
   span {
     line-height: 1;
   }
+
+  @media (max-width: 520px) {
+    span {
+      display: none;
+    }
+  }
 }
 
 .badge-vip {
@@ -130,6 +136,10 @@ main {
 
   span {
     line-height: 1;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 16px;
   }
 }
 
@@ -141,6 +151,10 @@ main {
   span {
     line-height: 1.2;
   }
+
+  @media (max-width: 520px) {
+    font-size: 10px;
+  }
 }
 
 .badge-video {
@@ -150,6 +164,10 @@ main {
   
   span {
     line-height: 1;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 10px;
   }
 }
 
@@ -168,6 +186,11 @@ main {
   text-transform: uppercase;
   font-weight: 600;
   transition-delay: .4s;
+
+  @media (max-width: 520px) {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .character > footer {

@@ -86,7 +86,7 @@ export const CharactersList = ({ badges }) => {
                   media="(max-width: 500px)"
                   srcSet={
                     badge.images[0].slice(0, 48) +
-                    "e_improve/w_160,h_216,c_fill,f_auto" +
+                    "e_improve/w_240,h_355,c_fill,f_auto" +
                     badge.images[0].slice(47)
                   }
                 />
