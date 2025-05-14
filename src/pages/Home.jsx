@@ -6,26 +6,9 @@ import { useTranslation } from "react-i18next";
 import Ubigeos from "../../src/assets/ubigeos.json";
 
 import bg1 from "../../src/assets/search-bg/search-bg-1.webp";
-import bg2 from "../../src/assets/search-bg/search-bg-2.webp";
-import bg3 from "../../src/assets/search-bg/search-bg-3.webp";
-import bg4 from "../../src/assets/search-bg/search-bg-4.webp";
-import bg7 from "../../src/assets/search-bg/search-bg-7.webp";
-
 import bgsm1 from "../../src/assets/search-bg/search-bg-sm-1.webp";
-import bgsm2 from "../../src/assets/search-bg/search-bg-sm-2.webp";
-import bgsm3 from "../../src/assets/search-bg/search-bg-sm-3.webp";
-import bgsm4 from "../../src/assets/search-bg/search-bg-sm-4.webp";
-import bgsm7 from "../../src/assets/search-bg/search-bg-sm-7.webp";
 
 import "./styles/Home.scss";
-
-const backgrounds = [bg1, bg2, bg3, bg4, bg7];
-const backgroundsMobile = [bgsm1, bgsm2, bgsm3, bgsm4, bgsm7];
-
-const imagenDesktop =
-  backgrounds[Math.floor(Math.random() * backgrounds.length)];
-const imagenMobile =
-  backgroundsMobile[Math.floor(Math.random() * backgrounds.length)];
 
 export default function Home() {
   const [t] = useTranslation();
@@ -131,14 +114,14 @@ export default function Home() {
         {/* Preload de imagenes para mobile */}
         <link
           rel="preload"
-          href={imagenMobile}
+          href={bgsm1}
           as="image"
           media="(max-width: 600px)"
         ></link>
         {/* Preload de imagenes para escritorio */}
         <link
           rel="preload"
-          href={imagenDesktop}
+          href={bg1}
           as="image"
           media="(min-width: 601px)"
         ></link>
@@ -176,9 +159,9 @@ export default function Home() {
             </button>
           </div>
           <picture>
-            <source media="(max-width: 500px)" srcSet={imagenMobile} />
+            <source media="(max-width: 500px)" srcSet={bgsm1} />
             <img
-              src={imagenDesktop}
+              src={bg1}
               alt=""
               className="w-[100%] h-[100%] object-cover absolute bg-pink-200"
               height={412}

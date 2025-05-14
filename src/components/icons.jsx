@@ -1,42 +1,3 @@
-const styles = {
-  svg: {
-    display: "inline-block",
-    verticalAlign: "middle",
-  },
-};
-
-const PrevArrow = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 27 44"
-      height="20"
-      style={styles.svg}
-    >
-      <path
-        d="M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z"
-        fill="#000"
-      />
-    </svg>
-  );
-};
-
-const NextArrow = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 27 44"
-      height="20"
-      style={styles.svg}
-    >
-      <path
-        d="M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z"
-        fill="#000"
-      />
-    </svg>
-  );
-};
-
 const Whatsapp = () => {
   return (
     <svg
@@ -117,4 +78,4 @@ const Badge = ({ width = "28px", height = "28px" }) => {
   );
 };
 
-export { PrevArrow, NextArrow, Whatsapp, Badge };
+export { Whatsapp, Badge };
