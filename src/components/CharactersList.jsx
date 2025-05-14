@@ -98,6 +98,8 @@ export const CharactersList = ({ badges }) => {
                   }
                   alt=""
                   className="character_img"
+                  loading="lazy"
+                  fetchpriority="low"
                 />
               </picture>
               <footer>

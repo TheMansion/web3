@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useRef, useEffect } from "react";
 import "./styles/Header.scss";
-import logo from "../icons/logo.png";
+import logo from "../icons/logo.webp";
 import pe from "../assets/flags/pe.svg";
 import us from "../assets/flags/us.svg";
 import pt from "../assets/flags/pt-br.svg";

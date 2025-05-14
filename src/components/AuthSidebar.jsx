@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import "./styles/AuthSidebar.scss";
-import logo from "../icons/logo.png";
+import logo from "../icons/logo.webp";
 
 import girls from "../icons/girls.jpg";
 import girlsWebp from "../icons/girls.webp";

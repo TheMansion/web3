@@ -181,6 +181,9 @@ export default function Home() {
               src={imagenDesktop}
               alt=""
               className="w-[100%] h-[100%] object-cover absolute bg-pink-200"
+              height={412}
+              width={160}
+              fetchpriority="high"
             />
           </picture>
         </div>
